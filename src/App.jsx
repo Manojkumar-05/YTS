@@ -1,9 +1,10 @@
-import { Component } from "./components/component/component"
+import { LandingPage } from "./components/component/landing-page"
+
 
 const App = () => {
   return (
     <>
-    <Component />
+    <LandingPage />
     </>
   )
 }
