@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link } from "@nextui-org/react"
 import { Button } from "@/components/ui/button"
+import { Grid } from "./grid";
+import { Wcard } from "./Wcard";
 
 export function LandingPage() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -119,140 +121,8 @@ export function LandingPage() {
             </div>
           </div>
         </section>
-        <section
-          className={`w-full py-12 md:py-24 lg:py-32 ${isDarkMode ? "bg-muted" : "bg-background"}`}>
-          <div className="container px-4 md:px-6">
-            <div
-              className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div
-                  className={`inline-block rounded-lg ${isDarkMode ? "bg-muted" : "bg-muted"} px-3 py-1 text-sm`}>
-                  Our Services
-                </div>
-                <h2
-                  className={`text-3xl font-bold tracking-tighter sm:text-5xl ${
-                    isDarkMode ? "text-primary-foreground" : "text-primary-foreground"
-                  }`}>
-                  Tailored Tech Solutions
-                </h2>
-                <p
-                  className={`max-w-[900px] ${
-                    isDarkMode ? "text-muted-foreground" : "text-muted-foreground"
-                  } md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed`}>
-                  Acme Tech Solutions offers a wide range of cutting-edge services to help your business thrive in the
-                  digital landscape.
-                </p>
-              </div>
-            </div>
-            <div
-              className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <div className="flex flex-col justify-center space-y-4">
-                <div
-                  className={`rounded-xl ${isDarkMode ? "bg-muted" : "bg-muted"} p-6 shadow-lg`}>
-                  <div className="grid gap-1">
-                    <h3
-                      className={`text-xl font-bold ${
-                        isDarkMode ? "text-primary-foreground" : "text-primary-foreground"
-                      }`}>
-                      Cloud Solutions
-                    </h3>
-                    <p
-                      className={`${isDarkMode ? "text-muted-foreground" : "text-muted-foreground"}`}>
-                      Leverage the power of the cloud to scale your infrastructure, improve reliability, and reduce
-                      costs.
-                    </p>
-                    <Link
-                      href="#"
-                      className={`inline-flex h-9 items-center justify-center rounded-md ${
-                        isDarkMode ? "bg-primary text-primary-foreground" : "bg-primary text-primary-foreground"
-                      } px-4 py-2 text-sm font-medium shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50`}
-                      prefetch={false}>
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center space-y-4">
-                <div
-                  className={`rounded-xl ${isDarkMode ? "bg-muted" : "bg-muted"} p-6 shadow-lg`}>
-                  <div className="grid gap-1">
-                    <h3
-                      className={`text-xl font-bold ${
-                        isDarkMode ? "text-primary-foreground" : "text-primary-foreground"
-                      }`}>
-                      Data Analytics
-                    </h3>
-                    <p
-                      className={`${isDarkMode ? "text-muted-foreground" : "text-muted-foreground"}`}>
-                      Unlock the power of your data with our advanced analytics solutions, helping you make informed,
-                      data-driven decisions.
-                    </p>
-                    <Link
-                      href="#"
-                      className={`inline-flex h-9 items-center justify-center rounded-md ${
-                        isDarkMode ? "bg-primary text-primary-foreground" : "bg-primary text-primary-foreground"
-                      } px-4 py-2 text-sm font-medium shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50`}
-                      prefetch={false}>
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center space-y-4">
-                <div
-                  className={`rounded-xl ${isDarkMode ? "bg-muted" : "bg-muted"} p-6 shadow-lg`}>
-                  <div className="grid gap-1">
-                    <h3
-                      className={`text-xl font-bold ${
-                        isDarkMode ? "text-primary-foreground" : "text-primary-foreground"
-                      }`}>
-                      Cybersecurity
-                    </h3>
-                    <p
-                      className={`${isDarkMode ? "text-muted-foreground" : "text-muted-foreground"}`}>
-                      Protect your business from cyber threats with our comprehensive security solutions, ensuring your
-                      data and systems are safe.
-                    </p>
-                    <Link
-                      href="#"
-                      className={`inline-flex h-9 items-center justify-center rounded-md ${
-                        isDarkMode ? "bg-primary text-primary-foreground" : "bg-primary text-primary-foreground"
-                      } px-4 py-2 text-sm font-medium shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50`}
-                      prefetch={false}>
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center space-y-4">
-                <div
-                  className={`rounded-xl ${isDarkMode ? "bg-muted" : "bg-muted"} p-6 shadow-lg`}>
-                  <div className="grid gap-1">
-                    <h3
-                      className={`text-xl font-bold ${
-                        isDarkMode ? "text-primary-foreground" : "text-primary-foreground"
-                      }`}>
-                      Software Development
-                    </h3>
-                    <p
-                      className={`${isDarkMode ? "text-muted-foreground" : "text-muted-foreground"}`}>
-                      Our team of expert developers can create custom software solutions tailored to your unique
-                      business needs.
-                    </p>
-                    <Link
-                      href="#"
-                      className={`inline-flex h-9 items-center justify-center rounded-md ${
-                        isDarkMode ? "bg-primary text-primary-foreground" : "bg-primary text-primary-foreground"
-                      } px-4 py-2 text-sm font-medium shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50`}
-                      prefetch={false}>
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          <Grid />
+          <Wcard />
         <section
           className={`w-full py-12 md:py-24 lg:py-32 ${
             isDarkMode ? "bg-gradient-to-r from-[#2c3e50] to-[#4ca1af]" : "bg-gradient-to-r from-[#2c3e50] to-[#4ca1af]"
