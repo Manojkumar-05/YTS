@@ -1,5 +1,5 @@
 import React from "react";
-import { WobbleCard } from "../ui/wobble-card";
+import { WobbleCard } from "./wobble-card";
 
 export function Wcard() {
   return (

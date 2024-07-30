@@ -1,12 +1,11 @@
-import { LandingPage } from "./components/component/landing-page"
-
+import PageTransitions from "./pages/HandlePages";
 
 const App = () => {
   return (
     <>
-    <LandingPage />
+      <PageTransitions />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
