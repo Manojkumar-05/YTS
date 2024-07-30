@@ -4,7 +4,7 @@ import React from 'react'
 
 const PageOne = () => {
   return (
-    <div className='bg-slate-50 w-screen h-screen'>
+    <div className='bg-slate-50 w-screen h-dvh'>
         <Nav />
         <WordTransitions />
     </div>

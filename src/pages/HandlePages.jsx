@@ -21,7 +21,7 @@ const NavigationSlider = withNavigationHandlers(AwesomeSlider);
 const Slider = () => {
   return (
     <NavigationSlider
-      className="awesome-slider"
+      className=""
       media={[
         {
           slug: "page-one",

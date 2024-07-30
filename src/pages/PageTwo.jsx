@@ -4,7 +4,7 @@ import React from "react";
 
 const PageTwo = () => {
   return (
-    <div className="bg-red-700 w-screen h-screen">
+    <div className="bg-red-700 w-screen h-dvh">
       <Nav />
       <div>
         <NumberTicker value={1000000} />

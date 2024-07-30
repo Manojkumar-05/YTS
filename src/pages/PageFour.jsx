@@ -3,9 +3,11 @@ import React from "react";
 
 const PageFour = () => {
   return (
-    <div className="bg-green-600 w-screen h-screen">
+    <div className="bg-green-600 w-screen h-screen overflow-auto">
       <Nav />
-      <div>PageFour</div>
+      <div style={{ height: "200vh" }}>
+        PageFour
+      </div>
     </div>
   );
 };
