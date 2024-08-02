@@ -14,5 +14,6 @@ export function WordTransitions() {
       </div>
       <Button color="" variant="light">Get Started</Button>
     </div>
+    
   );
 }

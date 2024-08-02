@@ -18,8 +18,8 @@ const Nav = () => {
       }}
     >
       <nav className="flex justify-between items-center">
-        <div className="font-bold text-3xl ml-6 flex justify-center items-center flex-col">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-r to-fuchsia-600 via-purple-600 from-pink-600 font-bold ">
+        <div className="font-bold text-3xl ml-6 flex justify-center itfems-center flex-col">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r to-fuchsia-600 via-purple-600 from-pink-600 font- ">
             YAR
           </h1>
         </div>
@@ -27,22 +27,22 @@ const Nav = () => {
           <ul className="flex gap-4">
             <li className="hover:text-[#9f64a4]">
               <Link href="page-one" className="text-lg">
-                Page One
+                Home
               </Link>
             </li>
             <li className="hover:text-[#ab41b5]">
               <Link href="page-two" className="text-lg">
-                Page Two
+                Join Us
               </Link>
             </li>
             <li className="hover:text-[#ab41b5]">
               <Link href="page-three" className="text-lg">
-                Page Three
+                About
               </Link>
             </li>
             <li className="hover:text-[#ab41b5]">
               <Link href="page-four" className="text-lg">
-                Page Four
+                Contact
               </Link>
             </li>
           </ul>

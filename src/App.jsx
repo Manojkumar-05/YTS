@@ -1,4 +1,4 @@
-import PageTransitions from "./pages/HandlePages";
+import PageTransitions from "./components/pages/HandlePages";
 
 const App = () => {
   return (

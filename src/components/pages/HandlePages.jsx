@@ -7,8 +7,6 @@ import {
   withNavigationContext,
   withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
-import { WordTransitions } from "@/components/ui/wordTransitions";
-import { WobbleCard } from "@/components/ui/wobble-card";
 import PageOne from "./PageOne";
 import PageTwo from "./PageTwo";
 import PageThree from "./PageThree";
