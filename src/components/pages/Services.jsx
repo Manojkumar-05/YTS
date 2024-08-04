@@ -1,12 +1,14 @@
-// import { Nav } from "../ui/Nav";
+import React from 'react'
+import { Nav } from '../ui/Nav'
 
-const Services = () => {
+const 
+Services = () => {
   return (
-    <div className="w-screen h-dvh overflow-auto">
-      {/* <Nav /> */}
-      Services
-    </div>
-  );
-};
+    <div>
+    <Nav />
+    Services</div>
+  )
+}
 
-export default Services;
+export default 
+Services
