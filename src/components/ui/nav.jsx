@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-awesome-slider/dist/navigation";
 import { Divide as Hamburger } from "hamburger-react";
 
-const Nav = () => {
+export function Nav(){
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -95,4 +95,3 @@ const Nav = () => {
   );
 };
 
-export default Nav;
