@@ -1,5 +1,5 @@
-import Nav from "@/components/ui/Nav";
 import React from "react";
+import Nav from "../ui/Nav";
 
 const Contact = () => {
   return (

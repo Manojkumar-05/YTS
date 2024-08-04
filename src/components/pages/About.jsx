@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "@/components/ui/Nav";
+import Nav from "../ui/Nav";
 
 const About = () => {
   return (

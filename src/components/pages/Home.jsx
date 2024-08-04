@@ -1,7 +1,7 @@
-import Nav from "@/components/ui/Nav";
 import React from "react";
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
 import { Hero } from "../ui/Hero";
+import Nav from "../ui/Nav";
 
 const Home = () => {
   return (
