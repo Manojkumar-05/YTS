@@ -5,7 +5,6 @@ import {
   Provider,
   withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
-import Services from "./Services";
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -23,11 +22,7 @@ const Slider = () => {
           className: "home",
           children: <Home />, // Directly using the component
         },
-        {
-          slug: "services",
-          className: "services",
-          children: <Services />, // Directly using the component
-        },
+
         {
           slug: "about",
           className: "about",

@@ -1,6 +1,6 @@
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
 import { Hero } from "../ui/Hero";
-import { Nav } from "../ui/nav";
+import { Nav } from "../ui/Nav";
 
 const Home = () => {
   return (

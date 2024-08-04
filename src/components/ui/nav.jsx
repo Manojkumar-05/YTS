@@ -33,11 +33,11 @@ export function Nav(){
                 Home
               </Link>
             </li>
-            <li className="hover:text-[#ccc]">
+            {/* <li className="hover:text-[#ccc]">
               <Link href="services" className="text-lg text-white">
                 Services
               </Link>
-            </li>
+            </li> */}
             <li className="hover:text-[#ccc]">
               <Link href="about" className="text-lg text-white">
                 About

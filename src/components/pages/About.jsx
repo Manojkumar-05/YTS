@@ -1,4 +1,4 @@
-import { Nav } from "../ui/nav";
+import { Nav } from "../ui/Nav";
 
 const About = () => {
   return (
