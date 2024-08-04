@@ -1,9 +1,9 @@
-import { Nav } from "../ui/Nav";
+// import { Nav } from "../ui/Nav";
 
 const Services = () => {
   return (
     <div className="w-screen h-dvh overflow-auto">
-      <Nav />
+      {/* <Nav /> */}
       Services
     </div>
   );
