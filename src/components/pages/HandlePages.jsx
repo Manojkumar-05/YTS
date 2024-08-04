@@ -43,20 +43,6 @@ const Slider = () => {
   );
 };
 
-// Page header navigation
-// const Header = () => {
-//   return (
-//     <header style={{ backgroundColor: "lightblue", padding: "10px" }}>
-//       <nav>
-//         <Link href="page-one">Page One</Link>
-//         <Link href="page-two">Page Two</Link>
-//         <Link href="page-three">Page Three</Link>
-//         <Link href="page-four">Page Four</Link>
-//       </nav>
-//     </header>
-//   );
-// };  
-
 // Wrap the application with the navigation Provider passing down the current page slug.
 const PageTransitions = () => {
   const slug = "home"; // Set the initial rendered slug
