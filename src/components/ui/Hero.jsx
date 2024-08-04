@@ -1,10 +1,10 @@
 import React from "react";
-import { FlipWords } from "./flip-words";
-import { TextGenerateEffect } from "./text-generate-effect";
-import NumberTicker from "./number-ticker";
+import { FlipWords } from "./ui-comp/flip-words";
+import { TextGenerateEffect } from "./ui-comp/text-generate-effect";
+import NumberTicker from "./ui-comp/number-ticker";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
-import AnimatedShinyText from "./animated-shiny-text";
+import AnimatedShinyText from "./ui-comp/animated-shiny-text";
 
 export function Hero() {
   const words = ["Modern", "Cutting-Edge", "Cross-Industrial", "Optimized"];

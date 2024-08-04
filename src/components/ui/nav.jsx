@@ -1,97 +1,116 @@
-import React, { useState } from "react";
-import { Link } from "react-awesome-slider/dist/navigation";
-import { Divide as Hamburger } from "hamburger-react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+} from "@/components/ui/ui-comp/sheet";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
-export function Nav(){
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Nav = () => {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleSelect = (path) => {
+    navigate(path);
+    setOpen(false);
   };
 
   return (
-    <header
-      style={{
-        backgroundColor: "#AB4ABA",
-        padding: "15px",
-      }}
-    >
-      <section className="flex justify-between items-center">
-        <div className="font-bold text-3xl ml-6 flex justify-center items-center flex-col">
-          <Link
-            href="home"
-            className="text-white bg-clip-text font-bold"
-            onClick={handleMenuToggle}
+    <header className="w-full bg-[#AB4ABA] px-4 py-3 sm:px-6 md:py-4">
+      <div className="container mx-auto flex items-center justify-between">
+        <Link href="#" className="flex items-center gap-2" prefetch={false}>
+          <p className="text-white font-bold text-3xl">YAR</p>
+        </Link>
+        <nav className="hidden space-x-4 md:flex">
+          <NavLink
+            to="/"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-[#AB4ABA] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
           >
-            YAR
-          </Link>
-        </div>
-        <div className="hidden md:flex gap-4">
-          <ul className="flex gap-4">
-            <li className="hover:text-[#ccc]">
-              <Link href="home" className="text-lg text-white">
+            Home
+          </NavLink>
+          <NavLink
+            to="services"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-[#AB4ABA] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="about"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-[#AB4ABA] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="contact"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-[#AB4ABA] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
+          >
+            Contact Us
+          </NavLink>
+        </nav>
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild className="bg-transparent border-none">
+            <Button variant="outline" size="icon" className="md:hidden">
+              <MenuIcon className="text-white ml-1" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-full max-w-xs bg-[#AB4ABA]">
+            <div className="grid gap-4 p-4">
+              <button
+                onClick={() => handleSelect("/")}
+                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              >
                 Home
-              </Link>
-            </li>
-            {/* <li className="hover:text-[#ccc]">
-              <Link href="services" className="text-lg text-white">
+              </button>
+              <button
+                onClick={() => handleSelect("services")}
+                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              >
                 Services
-              </Link>
-            </li> */}
-            <li className="hover:text-[#ccc]">
-              <Link href="about" className="text-lg text-white">
+              </button>
+              <button
+                onClick={() => handleSelect("about")}
+                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              >
                 About
-              </Link>
-            </li>
-            <li className="hover:text-[#ccc]">
-              <Link href="contact" className="text-lg text-white">
+              </button>
+              <button
+                onClick={() => handleSelect("contact")}
+                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#AB4ABA]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              >
                 Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="md:hidden flex justify-end">
-          <button
-            className="text-white hover:text-[#ccc]"
-            onClick={handleMenuToggle}
-          >
-            <Hamburger />
-          </button>
-        </div>
-      </section>
-      {isMenuOpen && (
-        <div
-          className="md:hidden flex flex-col gap-4 p-4 transition ease-in-out delay-150"
-          style={{
-            backgroundColor: "#AB4ABA",
-            transition: "all 0.3s ease-in-out",
-          }}
-        >
-          <ul className="flex flex-col gap-4">
-            <li className="hover:text-[#ccc]">
-              <Link href="home" className="text-lg text-white">
-                Home
-              </Link>
-            </li>
-            <li className="hover:text-[#ccc]">
-              <Link href="services" className="text-lg text-white">
-                Services
-              </Link>
-            </li>
-            <li className="hover:text-[#ccc]">
-              <Link href="about" className="text-lg text-white">
-                About
-              </Link>
-            </li>
-            <li className="hover:text-[#ccc]">
-              <Link href="contact" className="text-lg text-white">
-                Contact us
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+              </button>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 };
 
+function MenuIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </svg>
+  );
+}
+export default Nav;
