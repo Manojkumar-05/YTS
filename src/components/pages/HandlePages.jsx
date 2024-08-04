@@ -3,15 +3,12 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import {
   Provider,
-  Link,
-  withNavigationContext,
   withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
-import PageOne from "./PageOne";
-import PageTwo from "./PageTwo";
-import PageThree from "./PageThree";
-import PageFour from "./PageFour";
-
+import Home from "./Home";
+import Services from "./Services";
+import About from "./About";
+import Contact from "./Contact";
 // Wrap the AwesomeSlider component with the navigationHandlers
 const NavigationSlider = withNavigationHandlers(AwesomeSlider);
 
@@ -22,24 +19,24 @@ const Slider = () => {
       className=""
       media={[
         {
-          slug: "page-one",
-          className: "page-one",
-          children: <PageOne />, // Directly using the component
+          slug: "home",
+          className: "home",
+          children: <Home />, // Directly using the component
         },
         {
-          slug: "page-two",
-          className: "page-two",
-          children: <PageTwo />, // Directly using the component
+          slug: "services",
+          className: "services",
+          children: <Services />, // Directly using the component
         },
         {
-          slug: "page-three",
-          className: "page-three",
-          children: <PageThree />, // Directly using the component
+          slug: "about",
+          className: "about",
+          children: <About />, // Directly using the component
         },
         {
-          slug: "page-four",
-          className: "page-four",
-          children: <PageFour />, // Directly using the component
+          slug: "contact",
+          className: "contact",
+          children: <Contact />, // Directly using the component
         },
       ]}
     />
@@ -62,10 +59,10 @@ const Slider = () => {
 
 // Wrap the application with the navigation Provider passing down the current page slug.
 const PageTransitions = () => {
-  const slug = "page-one"; // Set the initial rendered slug
+  const slug = "home"; // Set the initial rendered slug
 
   return (
-    <Provider slug={slug}>
+    <Provider slug={slug} >
       {/* <Header /> */}
       <Slider />
     </Provider>
