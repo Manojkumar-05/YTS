@@ -5,10 +5,10 @@ import {
   Provider,
   withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
-import { Home } from "lucide-react";
 import Services from "./Services";
 import About from "./About";
 import Contact from "./Contact";
+import Home from "./Home";
 
 
 const NavigationSlider = withNavigationHandlers(AwesomeSlider);
