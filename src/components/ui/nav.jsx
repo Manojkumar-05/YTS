@@ -16,7 +16,7 @@ const Nav = () => {
         padding: "15px",
       }}
     >
-      <nav className="flex justify-between items-center">
+      <section className="flex justify-between items-center">
         <div className="font-bold text-3xl ml-6 flex justify-center items-center flex-col">
           <Link
             href="home"
@@ -58,7 +58,7 @@ const Nav = () => {
             <Hamburger />
           </button>
         </div>
-      </nav>
+      </section>
       {isMenuOpen && (
         <div
           className="md:hidden flex flex-col gap-4 p-4 transition ease-in-out delay-150"

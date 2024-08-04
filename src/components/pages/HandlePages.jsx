@@ -5,14 +5,14 @@ import {
   Provider,
   withNavigationHandlers,
 } from "react-awesome-slider/dist/navigation";
-import Home from "./Home";
+import { Home } from "lucide-react";
 import Services from "./Services";
 import About from "./About";
 import Contact from "./Contact";
-// Wrap the AwesomeSlider component with the navigationHandlers
+
+
 const NavigationSlider = withNavigationHandlers(AwesomeSlider);
 
-// Create an AwesomeSlider instance with some content
 const Slider = () => {
   return (
     <NavigationSlider
