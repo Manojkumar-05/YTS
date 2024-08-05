@@ -19,7 +19,7 @@ const Nav = () => {
   return (
     <header className="w-full bg-[#000] px-4 py-3 sm:px-6 md:py-4">
       <div className="container mx-auto flex items-center justify-between">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
+        <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <p className="text-white font-bold text-3xl">YAR</p>
         </Link>
         <nav className="hidden space-x-4 md:flex">
