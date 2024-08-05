@@ -23,7 +23,7 @@ export function Hero() {
         <button className="z-10 flex items-center justify-center">
           <div
             className={cn(
-              "group rounded-full border transition-all ease-in hover:cursor-pointer  border-white/5 bg-neutral-800 hover:bg-neutral-950"
+              "group rounded-full border transition-all ease-in hover:cursor-pointer  border-white/5 bg-black "
             )}
           >
             <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:duration-300 text-white">
