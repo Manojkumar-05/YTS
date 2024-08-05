@@ -30,6 +30,9 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+      colors: {
+        main: "#460073",
+      },
     },
 
     // Extend the default theme

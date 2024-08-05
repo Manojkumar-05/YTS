@@ -4,12 +4,12 @@ export function Cardz() {
   return (
     <div className="mt-[5rem] flex flex-col gap-10 items-center justify-center w-full">
       <p className="text-2xl font-bold text-black">Our Products</p>
-      <CardStack items={CARDS} />
+      <CardStack items={cards} />
     </div>
   );
 }
 
-const CARDS = [
+const cards = [
   {
     id: 0,
     name: "Multi-features shovel (Manvetti) using IoT",
@@ -60,6 +60,30 @@ const CARDS = [
         An intelligent machine designed to automatically remove pearl millet
         seeds, increasing efficiency and reducing the need for manual
         intervention in agriculture.
+      </p>
+    ),
+  },
+  {
+    id: 5,
+    name: "Design and implementation of multifunctional agribot using IoT",
+    content: (
+      <p>
+        A multifunctional agricultural robot integrated with IoT technology,
+        capable of performing various farming tasks with precision and autonomy.
+      </p>
+    ),
+  },
+  {
+    id: 6,
+    name: "Extraction of chitosan from shrimp shell and stem juice from Musa paradisiaca blended with polyvinyl alcohol for wound healing application",
+    content: (
+      <p>
+        An innovative biotechnological product that combines chitosan extracted
+        from shrimp shells and stem juice from Musa paradisiaca with polyvinyl
+        alcohol, designed for effective wound healing applications. At YAR Tech
+        Services, our products are developed with a focus on innovation,
+        efficiency, and sustainability, aiming to transform industries and
+        improve the quality of life.
       </p>
     ),
   },

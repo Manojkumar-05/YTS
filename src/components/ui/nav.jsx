@@ -31,18 +31,18 @@ const Nav = () => {
             Home
           </NavLink>
           <NavLink
-            to="services"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}
-          >
-            Services
-          </NavLink>
-          <NavLink
             to="about"
             className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
             About
+          </NavLink>
+          <NavLink
+            to="services"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            prefetch={false}
+          >
+            Services
           </NavLink>
           <NavLink
             to="contact"
