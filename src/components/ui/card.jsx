@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export function Cardz() {
   return (
     <div className="mt-[5rem] flex flex-col gap-10 items-center justify-center w-full">
-      <p className="text-xl font-medium">Our Products </p>
+      <p className="text-2xl font-bold">Our Products</p>
       <CardStack items={CARDS} />
     </div>
   );
