@@ -2,7 +2,7 @@
 
 const Contact = () => {
   return (
-    <div className="w-screen h-dvh overflow-auto">
+    <div>
       Join Us
     </div>
   );

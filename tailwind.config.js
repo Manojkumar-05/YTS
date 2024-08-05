@@ -1,20 +1,29 @@
+// Import required modules
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
-/** @type {import('tailwindcss').Config} */
+// Define the Tailwind CSS configuration
 module.exports = {
+  // Enable dark mode
   darkMode: "class",
+
+  // Specify the content files to scan for utility classes
   content: [
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
   ],
+
+  // Prefix for utility classes
   prefix: "",
+
+  // Theme configuration
   theme: {
+    // Container settings
     container: {
       center: true,
       padding: "2rem",
@@ -22,28 +31,21 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+
+    // Extend the default theme
     extend: {
+      // Font family settings
       fontFamily: {
         Montserrat: ["Montserrat", "sans-serif"],
       },
 
-      animation: {
-        shimmer: "shimmer 8s infinite",
-      },
-      keyframes: {
-        shimmer: {
-          "0%, 90%, 100%": {
-            "background-position": "calc(-100% - var(--shimmer-width)) 0",
-          },
-          "30%, 60%": {
-            "background-position": "calc(100% + var(--shimmer-width)) 0",
-          },
-        },
-      },
+      // Animation settings
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+
+      // Color palette
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -79,12 +81,15 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+
+      // Border radius settings
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
 
+      // Keyframe animations
       keyframes: {
         scroll: {
           to: {
@@ -100,6 +105,8 @@ module.exports = {
           to: { height: "0" },
         },
       },
+
+      // Animation settings
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
@@ -107,13 +114,14 @@ module.exports = {
     },
   },
 
+  // Plugins
   plugins: [require("tailwindcss-animate"), addVariablesForColors],
 };
 
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+// Plugin to add each Tailwind color as a global CSS variable
 function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 

@@ -1,7 +1,8 @@
 import React from "react";
 
 const Services = () => {
-  return <div>Services</div>;
+  return <div className="w-screen  overflow-auto">Services
+  </div>;
 };
 
 export default Services;
