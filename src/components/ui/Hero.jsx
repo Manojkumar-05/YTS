@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
 import AnimatedShinyText from "./ui-comp/animated-shiny-text";
 import { Cardz } from "./card";
+import { BackgroundBeams } from "./ui-comp/background-beams";
 
 export function Hero() {
   const words = ["Modern", "Cutting-Edge", "Cross-Industrial", "Optimized"];

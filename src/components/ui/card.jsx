@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export function Cardz() {
   return (
-    <div className="mt-[5rem] flex flex-col gap-10 items-center justify-center w-full">
+    <div className="mt-[5rem] flex flex-col gap-20 items-center justify-center w-full">
       <p className="text-2xl font-bold">Our Products</p>
       <CardStack items={CARDS} />
     </div>
@@ -14,35 +14,57 @@ export function Cardz() {
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "MULTI-FEATURES SHOVEL (MANVETTI) USING IoT",
     content: (
       <p>
-        These cards are amazing,I want to use them in my project. Framer motion
-        is a godsend ngl tbh fam 🙏
+        A versatile, IoT-enabled shovel designed for agricultural use, providing
+        real-time data and enhanced functionality to streamline farming tasks.
       </p>
     ),
   },
   {
     id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
+    name: "ARTIFICIAL INTELLIGENCE BASED MICROPIPETTE FOR LABORATORY USAGE",
+
     content: (
       <p>
-        I dont like this Twitter thing, deleting it right away because yolo.
-        Instead, I would like to call itX.com so that it can easily be confused
-        with adult sites.
+        A precision micropipette powered by artificial intelligence, ensuring
+        accurate and efficient liquid handling for laboratory applications.
       </p>
     ),
   },
   {
     id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
+    name: "AUTOMATIC FINGER MILLET SEED REMOVER USING ARTIFICIAL INTELLIGENCE",
+
     content: (
       <p>
-        The first rule of Fight Club is that you do not talk about fight club.
-        The second rule of Fight club is that you DO NOT TALK about fight club.
+        An AI-driven device that automates the removal of finger millet seeds,
+        improving productivity and reducing manual labor in agricultural
+        processes.
+      </p>
+    ),
+  },
+  {
+    id: 3,
+    name: "TRANSMISSION LINE BREAKAGE AND FAULT DETECTION USING IoT",
+
+    content: (
+      <p>
+        A sophisticated IoT solution for monitoring transmission lines, enabling
+        rapid detection and response to breakages and faults, ensuring reliable
+        power distribution.    </p>
+    ),
+  },
+  {
+    id: 4,
+    name: "AUTOMATIC PEARL MILLET SEED REMOVER USING ARTIFICIAL INTELLIGENCE",
+
+    content: (
+      <p>
+        An intelligent machine designed to automatically remove pearl millet
+        seeds, increasing efficiency and reducing the need for manual
+        intervention in agriculture.
       </p>
     ),
   },
