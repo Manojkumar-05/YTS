@@ -1,11 +1,9 @@
-"use client";
 import { CardStack } from "./ui-comp/card-stack";
-import { cn } from "@/lib/utils";
 
 export function Cardz() {
   return (
-    <div className="mt-[5rem] flex flex-col gap-20 items-center justify-center w-full">
-      <p className="text-2xl font-bold">Our Products</p>
+    <div className="mt-[5rem] flex flex-col gap-10 items-center justify-center w-full">
+      <p className="text-2xl font-bold text-black">Our Products</p>
       <CardStack items={CARDS} />
     </div>
   );
@@ -14,7 +12,7 @@ export function Cardz() {
 const CARDS = [
   {
     id: 0,
-    name: "MULTI-FEATURES SHOVEL (MANVETTI) USING IoT",
+    name: "Multi-features shovel (Manvetti) using IoT",
     content: (
       <p>
         A versatile, IoT-enabled shovel designed for agricultural use, providing
@@ -24,8 +22,7 @@ const CARDS = [
   },
   {
     id: 1,
-    name: "ARTIFICIAL INTELLIGENCE BASED MICROPIPETTE FOR LABORATORY USAGE",
-
+    name: "Artificial intelligence based micropipette for laboratory usage",
     content: (
       <p>
         A precision micropipette powered by artificial intelligence, ensuring
@@ -35,8 +32,7 @@ const CARDS = [
   },
   {
     id: 2,
-    name: "AUTOMATIC FINGER MILLET SEED REMOVER USING ARTIFICIAL INTELLIGENCE",
-
+    name: "Automatic finger millet seed remover using artificial intelligence",
     content: (
       <p>
         An AI-driven device that automates the removal of finger millet seeds,
@@ -47,19 +43,18 @@ const CARDS = [
   },
   {
     id: 3,
-    name: "TRANSMISSION LINE BREAKAGE AND FAULT DETECTION USING IoT",
-
+    name: "Transmission line breakage and fault detection using IoT",
     content: (
       <p>
         A sophisticated IoT solution for monitoring transmission lines, enabling
         rapid detection and response to breakages and faults, ensuring reliable
-        power distribution.    </p>
+        power distribution.
+      </p>
     ),
   },
   {
     id: 4,
-    name: "AUTOMATIC PEARL MILLET SEED REMOVER USING ARTIFICIAL INTELLIGENCE",
-
+    name: "Automatic pearl millet seed remover using artificial intelligence",
     content: (
       <p>
         An intelligent machine designed to automatically remove pearl millet
