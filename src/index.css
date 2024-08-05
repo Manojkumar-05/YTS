@@ -69,3 +69,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.card {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card:hover {
+  background-color: #8a31c2dd;
+  color: white;
+}
