@@ -1,9 +1,9 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useOutsideClick } from "../hooks/use-outside-click";
+import { useOutsideClick } from "./hooks/use-outside-click"; 
 import { Image } from "@nextui-org/react";
 
-export default function ExpandableCardDemo({cards}) {
+export default function ExpandableCards() {
   const [active, setActive] = useState(null);
   const id = useId();
   const ref = useRef(null);
@@ -86,7 +86,7 @@ export default function ExpandableCardDemo({cards}) {
                     </motion.p>
                   </div>
 
-                  {/* <motion.a
+                  <motion.a
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -95,8 +95,8 @@ export default function ExpandableCardDemo({cards}) {
                     target="_blank"
                     className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 te"
                   >
-                    {active.ctaText}
-                  </motion.a> */}
+                    See More
+                  </motion.a>
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -116,13 +116,13 @@ export default function ExpandableCardDemo({cards}) {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
+      <ul className="max-w-[90%] mx-auto w-screen grid grid-cols-1 md:grid-cols-3 items-start gap-4">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col bg-black hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col bg-black hover:bg-neutral-900 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -179,3 +179,130 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
+
+const cards = [
+  {
+    title: "AI",
+    src: "../assets/ai.jpg",
+    content: () => (
+      <p>
+        Leverage the power of Artificial Intelligence to automate processes,
+        gain insights, and enhance decision-making across your organization.
+      </p>
+    ),
+  },
+  {
+    title: "Edge Computing",
+    src: "../assets/edge-computing.jpg",
+    content: () => (
+      <p>
+        Optimize data processing and reduce latency with edge computing
+        solutions that bring computation closer to the source of data
+        generation.
+      </p>
+    ),
+  },
+  {
+    title: "Data Analytics",
+    src: "../assets/data-analytics.jpg",
+    content: () => (
+      <p>
+        Transform your data into actionable insights with advanced data
+        analytics services, helping you make informed business decisions.
+      </p>
+    ),
+  },
+  {
+    title: "IoT",
+    src: "../assets/iot.jpg",
+    content: () => (
+      <p>
+        Connect devices and systems with Internet of Things (IoT) solutions that
+        improve operational efficiency, enable real-time monitoring, and drive
+        innovation.
+      </p>
+    ),
+  },
+  {
+    title: "Cloud",
+    src: "../assets/cloud.jpg",
+    content: () => (
+      <p>
+        Enhance scalability, flexibility, and security with our cloud computing
+        services, designed to meet the demands of modern businesses.
+      </p>
+    ),
+  },
+  {
+    title: "AR/VR",
+    src: "../assets/ar-vr.jpg",
+    content: () => (
+      <p>
+        Create immersive experiences with Augmented Reality (AR) and Virtual
+        Reality (VR) technologies for applications ranging from training to
+        customer engagement.
+      </p>
+    ),
+  },
+  {
+    title: "Enterprise Solutions",
+    src: "../assets/enterprise-solutions.jpg",
+    content: () => (
+      <p>
+        Streamline operations and drive growth with enterprise solutions
+        tailored to meet the specific needs of your business.
+      </p>
+    ),
+  },
+  {
+    title: "Digital Engineering",
+    src: "../assets/digital-engineering.jpg",
+    content: () => (
+      <p>
+        Innovate and transform your product development process with digital
+        engineering solutions that integrate cutting-edge technologies and
+        methodologies.
+      </p>
+    ),
+  },
+  {
+    title: "Cognitive Business Operations",
+    src: "../assets/cognitive-business-operations.jpg",
+    content: () => (
+      <p>
+        Enhance business operations with cognitive technologies that automate
+        processes, improve efficiency, and enable smarter decision-making.
+      </p>
+    ),
+  },
+  {
+    title: "Networking",
+    src: "../assets/networking.jpg",
+    content: () => (
+      <p>
+        Ensure robust, reliable, and secure communication infrastructure with
+        our comprehensive networking solutions.
+      </p>
+    ),
+  },
+  {
+    title: "Digital Marketing",
+    src: "../assets/digital-marketing.jpg",
+    content: () => (
+      <p>
+        Boost your online presence and drive customer engagement with our
+        strategic digital marketing services.
+      </p>
+    ),
+  },
+  {
+    title: "Sustainability",
+    src: "../assets/sustainability.jpg",
+    content: () => (
+      <p>
+        Adopt sustainable practices with our eco-friendly solutions designed to
+        minimize environmental impact and promote long-term growth.
+      </p>
+    ),
+  },
+];

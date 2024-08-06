@@ -1,6 +1,12 @@
-import { IconBook, IconDeviceLaptop, IconGlobe, IconSchool, IconTools } from "@tabler/icons-react";
+import {
+  IconBook,
+  IconDeviceLaptop,
+  IconGlobe,
+  IconSchool,
+  IconTools,
+} from "@tabler/icons-react";
 import { University } from "lucide-react";
-import meetingImg from "../assets/meet.jpg"
+import meetingImg from "../assets/meet.jpg";
 import GradualSpacing from "../ui/ui-comp/gradual-spacing";
 import { TextGenerateEffect } from "../ui/ui-comp/text-generate-effect";
 
@@ -89,73 +95,57 @@ const About = () => {
             </p>
           </div>
           <div className="grid gap-6 mt-8 md:grid-cols-3 text-black">
-            <div className="card bg-white rounded-lg p-6 shadow-sm">
-              <IconSchool size={70} className="mx-auto" />
-              <h3 className="text-xl font-bold mt-4">Engineering Colleges</h3>
-              <p className="mt-2">
-                We partner with leading engineering colleges to provide students
-                with hands-on experience in product development, software
-                engineering, and emerging technologies, preparing them for
-                successful careers in the tech industry.
-              </p>
-            </div>
-            <div className="card bg-white rounded-lg p-6 shadow-sm">
-              <IconBook size={70} className="mx-auto" />
-              <h3 className="text-xl font-bold mt-4">
-                Arts and Science Colleges
-              </h3>
-              <p className="mt-2">
-                Our collaborations with arts and science colleges facilitate
-                interdisciplinary learning, integrating technology with various
-                fields of study to inspire innovative thinking and creative
-                problem-solving.
-              </p>
-            </div>
-            <div className="card bg-white rounded-lg p-6 shadow-sm">
-              <IconTools size={70} className="mx-auto" />
-              <h3 className="text-xl font-bold mt-4">Technical Institutes</h3>
-              <p className="mt-2">
-                Through our partnerships with technical institutes, we offer
-                specialized training programs and workshops, equipping students
-                with the skills and knowledge needed to excel in technical and
-                vocational careers.
-              </p>
-            </div>
-            <div className="card bg-white rounded-lg p-6 shadow-sm">
-              <University size={70} className="mx-auto" />
-              <h3 className="text-xl font-bold mt-4">Universities</h3>
-              <p className="mt-2">
-                Our MOUs with universities around the globe enable us to engage
-                in joint research projects, share resources, and create
-                internship opportunities that benefit both students and faculty
-                members.
-              </p>
-            </div>
-            <div className="card bg-white rounded-lg p-6 shadow-sm">
-              <IconGlobe size={70} className="mx-auto" />
-              <h3 className="text-xl font-bold mt-4">International Schools</h3>
-              <p className="mt-2">
-                We collaborate with international schools to introduce advanced
-                technology curricula and extracurricular programs, fostering a
-                global perspective and preparing students for the digital
-                future.
-              </p>
-            </div>
-            <div className="card bg-white rounded-lg p-6 shadow-sm">
-              <IconDeviceLaptop size={70} className="mx-auto" />
-              <h3 className="text-xl font-bold mt-4">CBSE Schools</h3>
-              <p className="mt-2">
-                By partnering with CBSE schools, we bring technology-driven
-                educational initiatives to younger students, promoting early
-                exposure to STEM subjects and encouraging innovation from a
-                young age.
-              </p>
-            </div>
+            {cardData.map((item, index) => (
+              <div className="card bg-white rounded-lg p-6 shadow-sm">
+                <item.icon size={70} className="mx-auto" />
+                <h3 className="text-xl font-bold mt-4">{item.title}</h3>
+                <p className="mt-2">{item.content}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
     </div>
   );
 };
+
+const cardData = [
+  {
+    icon: IconSchool,
+    title: "Engineering Colleges",
+    content:
+      "We partner with leading engineering colleges to provide students with hands-on experience in product development, software engineering, and emerging technologies, preparing them for successful careers in the tech industry.",
+  },
+  {
+    icon: IconBook,
+    title: "Arts and Science Colleges",
+    content:
+      "Our collaborations with arts and science colleges facilitate interdisciplinary learning, integrating technology with various fields of study to inspire innovative thinking and creative problem-solving.",
+  },
+  {
+    icon: IconTools,
+    title: "Technical Institutes",
+    content:
+      "Through our partnerships with technical institutes, we offer specialized training programs and workshops, equipping students with the skills and knowledge needed to excel in technical and vocational careers.",
+  },
+  {
+    icon: University,
+    title: "Universities",
+    content:
+      "Our MOUs with universities around the globe enable us to engage in joint research projects, share resources, and create internship opportunities that benefit both students and faculty members.",
+  },
+  {
+    icon: IconGlobe,
+    title: "International Schools",
+    content:
+      "We collaborate with international schools to introduce advanced technology curricula and extracurricular programs, fostering a global perspective and preparing students for the digital future.",
+  },
+  {
+    icon: IconDeviceLaptop,
+    title: "CBSE Schools",
+    content:
+      "By partnering with CBSE schools, we bring technology-driven educational initiatives to younger students, promoting early exposure to STEM subjects and encouraging innovation from a young age.",
+  },
+];
 
 export default About;
