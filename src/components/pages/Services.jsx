@@ -1,8 +1,9 @@
 import React from "react";
+import ExpandableCardDemo from "../ui/ui-comp/expandable-card-demo-grid";
 
 const Services = () => {
   return (
-    <div className="bg-[#460073] min-h-screen overflow-auto">
+    <div className="bg-[#460073] min-h-screen overflow-auto pt-[4rem]">
       <div>
         <h1>Our Services</h1>
         <p>
@@ -13,96 +14,7 @@ const Services = () => {
           that meet the unique needs of our clients. Explore our key service
           offerings:
         </p>
-        <div>
-          <h2>AI</h2>
-          <p>
-            Leverage the power of Artificial Intelligence to automate processes,
-            gain insights, and enhance decision-making across your organization.
-          </p>
-        </div>
-        <div>
-          <h2>Edge Computing</h2>
-          <p>
-            Optimize data processing and reduce latency with edge computing
-            solutions that bring computation closer to the source of data
-            generation.
-          </p>
-        </div>
-        <div>
-          <h2>Data Analytics</h2>
-          <p>
-            Transform your data into actionable insights with advanced data
-            analytics services, helping you make informed business decisions.
-          </p>
-        </div>
-        <div>
-          <h2>IoT</h2>
-          <p>
-            Connect devices and systems with Internet of Things (IoT) solutions
-            that improve operational efficiency, enable real-time monitoring,
-            and drive innovation.
-          </p>
-        </div>
-        <div>
-          <h2>Cloud</h2>
-          <p>
-            Enhance scalability, flexibility, and security with our cloud
-            computing services, designed to meet the demands of modern
-            businesses.
-          </p>
-        </div>
-        <div>
-          <h2>AR/VR</h2>
-          <p>
-            Create immersive experiences with Augmented Reality (AR) and Virtual
-            Reality (VR) technologies for applications ranging from training to
-            customer engagement.
-          </p>
-        </div>
-        <div>
-          <h2>Enterprise Solutions</h2>
-          <p>
-            Streamline operations and drive growth with enterprise solutions
-            tailored to meet the specific needs of your business.
-          </p>
-        </div>
-        <div>
-          <h2>Digital Engineering</h2>
-          <p>
-            Innovate and transform your product development process with digital
-            engineering solutions that integrate cutting-edge technologies and
-            methodologies.
-          </p>
-        </div>
-        <div>
-          <h2>Cognitive Business Operations</h2>
-          <p>
-            Enhance business operations with cognitive technologies that
-            automate processes, improve efficiency, and enable smarter
-            decision-making.
-          </p>
-        </div>
-        <div>
-          <h2>Networking </h2>
-          <p>
-            Ensure robust, reliable, and secure communication infrastructure
-            with our comprehensive networking solutions.
-          </p>
-        </div>
-        <div>
-          <h2>Digital Marketing</h2>
-          <p>
-            Boost your online presence and drive customer engagement with our
-            strategic digital marketing services.
-          </p>
-        </div>
-        <div>
-          <h2>Sustainability</h2>
-          <p>
-            Adopt sustainable practices with our eco-friendly solutions designed
-            to minimize environmental impact and promote long-term growth.
-          </p>
-        </div>
+        <ExpandableCardDemo cards={cards} />
         <p>
           At YAR Tech Services, we are dedicated to providing innovative,
           high-quality services that empower our clients to achieve their
@@ -227,3 +139,15 @@ const Services = () => {
 };
 
 export default Services;
+
+const cards = [
+  {
+    title: "",
+    src: "../assets/meet.jpg",
+    content: () => (
+      <p>
+      </p>
+    ),
+  },
+ 
+];
