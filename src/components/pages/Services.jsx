@@ -1,10 +1,10 @@
 import React from "react";
-import ServicesAccordions from "../ui/ServicesAccordions";
 import ExpandableCards from "../ui/expandable-cards";
+import { ServicesAccordion } from "../ui/ServicesAccordion";
 
 const Services = () => {
   return (
-    <div className="bg-[#460073] min-h-screen overflow-auto pt-[4rem]">
+    <div className="bg-[#460073] min-h-screen overflow-auto pt-[4rem] text-white">
       <div>
         <h1>Our Services</h1>
         <p>
@@ -33,7 +33,7 @@ const Services = () => {
           remain at the forefront of industry advancements. Here are the key
           industries we serve:
         </p>
-        <ServicesAccordions />
+        <ServicesAccordion />
         <p>
           At YAR Tech Services, our industry-specific expertise ensures that we
           deliver tailored solutions that meet the unique needs of each sector,

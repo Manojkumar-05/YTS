@@ -13,6 +13,7 @@ export default defineConfig({
     },
   },
   css: {
+    postcss: "./postcss.config.js",
     preprocessorOptions: {
       css: {
         // Make sure to adjust the path if necessary

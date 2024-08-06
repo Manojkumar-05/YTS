@@ -1,6 +1,6 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useOutsideClick } from "./hooks/use-outside-click"; 
+import { useOutsideClick } from "./hooks/use-outside-click";
 import { Image } from "@nextui-org/react";
 
 export default function ExpandableCards() {
