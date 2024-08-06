@@ -14,53 +14,213 @@ const Services = () => {
           offerings:
         </p>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>AI</h2>
+          <p>
+            Leverage the power of Artificial Intelligence to automate processes,
+            gain insights, and enhance decision-making across your organization.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Edge Computing</h2>
+          <p>
+            Optimize data processing and reduce latency with edge computing
+            solutions that bring computation closer to the source of data
+            generation.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Data Analytics</h2>
+          <p>
+            Transform your data into actionable insights with advanced data
+            analytics services, helping you make informed business decisions.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>IoT</h2>
+          <p>
+            Connect devices and systems with Internet of Things (IoT) solutions
+            that improve operational efficiency, enable real-time monitoring,
+            and drive innovation.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Cloud</h2>
+          <p>
+            Enhance scalability, flexibility, and security with our cloud
+            computing services, designed to meet the demands of modern
+            businesses.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>AR/VR</h2>
+          <p>
+            Create immersive experiences with Augmented Reality (AR) and Virtual
+            Reality (VR) technologies for applications ranging from training to
+            customer engagement.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Enterprise Solutions</h2>
+          <p>
+            Streamline operations and drive growth with enterprise solutions
+            tailored to meet the specific needs of your business.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Digital Engineering</h2>
+          <p>
+            Innovate and transform your product development process with digital
+            engineering solutions that integrate cutting-edge technologies and
+            methodologies.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Cognitive Business Operations</h2>
+          <p>
+            Enhance business operations with cognitive technologies that
+            automate processes, improve efficiency, and enable smarter
+            decision-making.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Networking </h2>
+          <p>
+            Ensure robust, reliable, and secure communication infrastructure
+            with our comprehensive networking solutions.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Digital Marketing</h2>
+          <p>
+            Boost your online presence and drive customer engagement with our
+            strategic digital marketing services.
+          </p>
         </div>
         <div>
-          <h2></h2>
-          <p></p>
+          <h2>Sustainability</h2>
+          <p>
+            Adopt sustainable practices with our eco-friendly solutions designed
+            to minimize environmental impact and promote long-term growth.
+          </p>
         </div>
+        <p>
+          At YAR Tech Services, we are dedicated to providing innovative,
+          high-quality services that empower our clients to achieve their
+          business goals and stay ahead in an ever-evolving technological
+          landscape.
+        </p>
+      </div>
+      <div>
+        <h1>Industries We Serve</h1>
+        <p>
+          At YAR Tech Services, our expertise spans a diverse range of
+          industries, enabling us to deliver specialized solutions that drive
+          innovation and growth across various sectors. Our commitment to
+          cutting-edge technologies and sustainable practices ensures that we
+          remain at the forefront of industry advancements. Here are the key
+          industries we serve:
+        </p>
+        <div>
+          <h2>Agri Tech</h2>
+          <p>
+            Transforming agriculture with advanced technologies to enhance
+            productivity, efficiency, and sustainability in farming practices.
+          </p>
+        </div>
+        <div>
+          <h2>Healthcare</h2>
+          <p>
+            Innovating healthcare solutions to improve patient outcomes,
+            streamline operations, and facilitate the delivery of high-quality
+            care.
+          </p>
+        </div>
+        <div>
+          <h2>Renewable Energy</h2>
+          <p>
+            Driving the future of clean energy with sustainable solutions that
+            harness the power of wind, solar, and other renewable resources.
+          </p>
+        </div>
+        <div>
+          <h2>Bio Tech</h2>
+          <p>
+            Pioneering advancements in biotechnology to address critical
+            challenges in medicine, agriculture, and environmental protection.
+          </p>
+        </div>
+        <div>
+          <h2>Aerospace</h2>
+          <p>
+            Enhancing aerospace technology with cutting-edge solutions for
+            improved safety, performance, and efficiency in air and space
+            travel.
+          </p>
+        </div>
+        <div>
+          <h2>Automotive</h2>
+          <p>
+            Revolutionizing the automotive industry with innovations in electric
+            vehicles, autonomous driving, and advanced manufacturing techniques.
+          </p>
+        </div>
+        <div>
+          <h2>Banking</h2>
+          <p>
+            Modernizing banking and financial services with secure, efficient,
+            and user-friendly digital solutions.
+          </p>
+        </div>
+        <div>
+          <h2>Retail</h2>
+          <p>
+            Elevating the retail experience with technology-driven solutions
+            that optimize operations, enhance customer engagement, and drive
+            sales.
+          </p>
+        </div>
+        <div>
+          <h2>Food Tech</h2>
+          <p>
+            Innovating the food industry with sustainable practices and advanced
+            technologies to improve food production, safety, and distribution.
+          </p>
+        </div>
+        <div>
+          <h2>Manufacturing</h2>
+          <p>
+            Transforming manufacturing processes with automation, IoT, and smart
+            technologies to increase efficiency and reduce costs.
+          </p>
+        </div>
+        <div>
+          <h2>Communication</h2>
+          <p>
+            Advancing communication technologies to enable faster, more
+            reliable, and more secure information exchange across the globe.
+          </p>
+        </div>
+        <div>
+          <h2>Life Sciences</h2>
+          <p>
+            Driving breakthroughs in life sciences with innovative research and
+            development solutions that improve health and well-being.
+          </p>
+        </div>
+        <div>
+          <h2>AR/VR</h2>
+          <p>
+            Creating immersive experiences with augmented reality (AR) and
+            virtual reality (VR) technologies for various applications, from
+            training to entertainment.
+          </p>
+        </div>
+        <p>
+          At YAR Tech Services, our industry-specific expertise ensures that we
+          deliver tailored solutions that meet the unique needs of each sector,
+          empowering our clients to achieve their goals and thrive in a
+          competitive landscape.
+        </p>
       </div>
     </div>
   );

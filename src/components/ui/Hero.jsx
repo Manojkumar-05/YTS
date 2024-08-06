@@ -12,8 +12,8 @@ export function Hero() {
 
   return (
     <div >
-      <div className="mt-[9rem] flex flex-col items-center gap-9 px-4 overflow-auto">
-        <section className="lg:text-4xl sm:2xl font-semibold mx-auto  text-[#8c6a5d]">
+      <div className="mt-[14rem] flex flex-col items-center gap-9 px-4 overflow-auto ">
+        <section className="lg:text-5xl sm:2xl font-semibold mx-auto  text-[#8c6a5d]">
           <div className="flex">
             <TextGenerateEffect words={"Build"} />
             <FlipWords words={words} /> <br />
