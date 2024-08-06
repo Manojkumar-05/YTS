@@ -7,7 +7,7 @@ import { TextGenerateEffect } from "../ui/ui-comp/text-generate-effect";
 const About = () => {
   return (
     <div className="flex flex-col min-h-dvh bg-[#460073] text-white font-medium">
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black ">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-black h-dvh">
         <div className="container px-4 md:px-6 text-center">
           <GradualSpacing
             className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl"

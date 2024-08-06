@@ -49,7 +49,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
             key={card.id}
             className="absolute bg-black h-60 w-[30rem] md:h-60 md:w-[48rem] rounded-xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-around"
             style={{
-              transformOrigin: "center",
+              transformOrigin: "bottom",
             }}
             animate={{
               top: index * -CARD_OFFSET,
