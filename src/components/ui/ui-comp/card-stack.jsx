@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 let interval;
 
@@ -13,6 +14,8 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
   useEffect(() => {
     if (!isHovered) {
       startFlipping();
+    } else {
+      clearInterval(interval);
     }
 
     return () => clearInterval(interval);
@@ -29,7 +32,6 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
   };
 
   const handleMouseEnter = () => {
-    clearInterval(interval);
     setIsHovered(true);
   };
 
@@ -37,9 +39,25 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
     setIsHovered(false);
   };
 
+  const handleNext = () => {
+    setCards((prevCards) => {
+      const newArray = [...prevCards];
+      newArray.unshift(newArray.pop());
+      return newArray;
+    });
+  };
+
+  const handlePrev = () => {
+    setCards((prevCards) => {
+      const newArray = [...prevCards];
+      newArray.push(newArray.shift());
+      return newArray;
+    });
+  };
+
   return (
     <div
-      className="relative w-[30rem] md:h-60 md:w-[48rem] mb-5"
+      className="relative h-60 w-full md:w-[48rem] mb-5"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -47,14 +65,14 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
         return (
           <motion.div
             key={card.id}
-            className="absolute bg-black h-60 w-[30rem] md:h-60 md:w-[48rem] rounded-xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-around"
+            className="absolute bg-black hover:bg-[#0a0a0a] h-[13rem] w-[90%] md:w-[48rem] rounded-xl p-4 shadow-xl border-none  dark:shadow-white/[0.05] flex flex-col justify-evenly"
             style={{
-              transformOrigin: "bottom",
+              transformOrigin: "center",
             }}
             animate={{
               top: index * -CARD_OFFSET,
               scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-              zIndex: cards.length - index, //  decrease z-index for the cards that are behind
+              zIndex: cards.length - index, // decrease z-index for the cards that are behind
             }}
           >
             <p className="text-white font-medium hidden sm:block">
@@ -65,6 +83,28 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
           </motion.div>
         );
       })}
+      <div
+        className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
+        style={{ left: "-2rem" }}
+      >
+        <button
+          className="text-white bg-black p-2 rounded-full shadow-md"
+          onClick={handlePrev}
+        >
+          <FaArrowLeft />
+        </button>
+      </div>
+      <div
+        className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
+        style={{ right: "-2rem" }}
+      >
+        <button
+          className="text-white bg-black p-2 rounded-full shadow-md"
+          onClick={handleNext}
+        >
+          <FaArrowRight />
+        </button>
+      </div>
     </div>
   );
 };

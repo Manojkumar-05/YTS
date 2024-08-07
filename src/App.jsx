@@ -8,7 +8,7 @@ import Contact from "./components/pages/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <div className="font-Montserrat w-[100%] flex flex-col overflow-auto">
+      <div className="font-Montserrat w-[100%] flex flex-col overflow-auto scroll-smooth">
         <Nav />
         <Routes className="flex-grow">
           <Route path="/" element={<Home />} />

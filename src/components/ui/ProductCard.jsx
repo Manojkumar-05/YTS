@@ -78,12 +78,8 @@ const cards = [
     name: "Extraction of chitosan from shrimp shell and stem juice from Musa paradisiaca blended with polyvinyl alcohol for wound healing application",
     content: (
       <p>
-        An innovative biotechnological product that combines chitosan extracted
-        from shrimp shells and stem juice from Musa paradisiaca with polyvinyl
-        alcohol, designed for effective wound healing applications. At YAR Tech
-        Services, our products are developed with a focus on innovation,
-        efficiency, and sustainability, aiming to transform industries and
-        improve the quality of life.
+        An innovative biotechnological product that combines chitosan and stem juice from Musa paradisiaca with polyvinyl
+        alcohol, designed for effective wound healing applications.   
       </p>
     ),
   },
