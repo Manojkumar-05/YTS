@@ -6,24 +6,24 @@ import EdgeComputing from "../assets/edge-computing.jpg";
 
 const cards = [
   {
+  // Example : Do it for all like this 
+  title: "Edge Computing",
+  src: EdgeComputing,
+  content: () => (
+    <p>
+      Optimize data processing and reduce latency with edge computing
+      solutions that bring computation closer to the source of data
+      generation.
+    </p>
+  ),
+},
+  {
     title: "AI",
     src: "https://imageio.forbes.com/specials-images/imageserve/645b3eca0059191fb09c02fa/15-Amazing-Real-World-Applications-Of-AI-Everyone-Should-Know-About/960x0.jpg?height=400&width=711&fit=bounds",
     content: () => (
       <p>
         Leverage the power of Artificial Intelligence to automate processes,
         gain insights, and enhance decision-making across your organization.
-      </p>
-    ),
-  },
-  {
-    // Example : Do it for all like this 
-    title: "Edge Computing",
-    src: EdgeComputing,
-    content: () => (
-      <p>
-        Optimize data processing and reduce latency with edge computing
-        solutions that bring computation closer to the source of data
-        generation.
       </p>
     ),
   },
