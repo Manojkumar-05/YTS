@@ -90,19 +90,19 @@ const Nav = () => {
               >
                 Home
               </button>
-             <button
-                onClick={() => handleSelect("services")}
-                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                aria-describedby={undefined}
-              >
-                Services
-              </button>
               <button
                 onClick={() => handleSelect("about")}
                 className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 aria-describedby={undefined}
               >
                 About
+              </button>
+             <button
+                onClick={() => handleSelect("services")}
+                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                aria-describedby={undefined}
+              >
+                Services
               </button>
               <button
                 onClick={() => handleSelect("contact")}
