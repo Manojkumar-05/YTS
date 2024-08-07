@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "./ui-comp/accordion"
+} from "./ui-comp/accordion";
 import { Button } from "@/components/ui/button";
 
 // New data array
@@ -79,20 +79,23 @@ const accordionData = [
 export function ServicesAccordion() {
   const [showAll, setShowAll] = useState(false);
 
-  const displayedItems = showAll ? accordionData : accordionData.slice(0, 3);
+  const displayedItems = showAll ? accordionData : accordionData.slice(0, 5);
 
   return (
     <div className="w-full max-w-xl mx-auto">
       <Accordion type="single" collapsible>
         {displayedItems.map((item, index) => (
           <AccordionItem key={index} value={`item-${index + 1}`}>
-            <AccordionTrigger className="bg-card text-card-foreground hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring transition-colors duration-300">
+            <AccordionTrigger>
               <div className="flex items-center justify-between w-full">
                 <h3 className="text-lg font-semibold">{item.title}</h3>
               </div>
             </AccordionTrigger>
-            <AccordionContent className="bg-card text-card-foreground overflow-hidden transition-all duration-700 ease-out" 
-              className={`animate-${item.isOpen ? 'accordion-down' : 'accordion-up'}`}>
+            <AccordionContent
+              className={`animate-${
+                item.isOpen ? "accordion-down" : "accordion-up"
+              }`}
+            >
               <div className="py-4 text-sm lg:text-medium leading-relaxed">
                 {item.content}
               </div>
@@ -104,7 +107,7 @@ export function ServicesAccordion() {
         <Button
           variant="outline"
           onClick={() => setShowAll(!showAll)}
-          className="flex items-center gap-2 bg-black border-none hover:bg-gray-700 focus:bg-gray-800 transition-all duration-300 ease-in-out"
+          className="flex items-center gap-2 bg-black border-none hover:bg-neutral-950 transition-all duration-300 ease-in-out"
         >
           {showAll ? "Show less" : "Show more"}
         </Button>

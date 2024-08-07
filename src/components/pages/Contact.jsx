@@ -1,8 +1,13 @@
 import React from 'react'
+import { Contactus } from '../ui/ui-comp/contactus'
+import { Joinus } from '../ui/ui-comp/joinus'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <Contactus />
+      <Joinus />
+    </div>
   )
 }
 

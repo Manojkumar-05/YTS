@@ -75,17 +75,17 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
               zIndex: cards.length - index, // decrease z-index for the cards that are behind
             }}
           >
-            <p className="text-white font-medium hidden sm:block">
-              {card.name}
-            </p>
-            <div className="font-normal text-white">{card.content}</div>
+            <p className="text-white font-medium">{card.name}</p>
+            <div className="font-normal text-white hidden sm:block">
+              {card.content}
+            </div>
             <div></div>
           </motion.div>
         );
       })}
       <div
         className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
-        style={{ left: "-2rem" }}
+        style={{ left: "-1rem" }}
       >
         <button
           className="text-white bg-black p-2 rounded-full shadow-md"
@@ -96,7 +96,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
       </div>
       <div
         className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
-        style={{ right: "-2rem" }}
+        style={{ right: "-1rem" }}
       >
         <button
           className="text-white bg-black p-2 rounded-full shadow-md"
