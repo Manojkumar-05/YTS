@@ -57,7 +57,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
 
   return (
     <div
-      className="relative h-60 w-full md:w-[48rem] mb-5"
+      className="relative h-60 w-full md:w-[48rem] mb-10"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -65,7 +65,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
         return (
           <motion.div
             key={card.id}
-            className="absolute bg-black hover:bg-[#0a0a0a] h-[13rem] w-[90%] md:w-[48rem] rounded-xl p-4 shadow-xl border-none  dark:shadow-white/[0.05] flex flex-col justify-evenly"
+            className="absolute bg-black hover:bg-[#0a0a0a] h-[13rem] w-[90%] md:w-[48rem] rounded-md p-4 shadow-xl border-none  dark:shadow-white/[0.05] flex flex-col justify-evenly"
             style={{
               transformOrigin: "center",
             }}
