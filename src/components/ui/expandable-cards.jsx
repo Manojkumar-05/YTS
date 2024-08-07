@@ -59,10 +59,8 @@ export default function ExpandableCards() {
               className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <Image
+                <img
                   priority
-                  width={200}
-                  height={200}
                   src={active.src}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
@@ -122,16 +120,14 @@ export default function ExpandableCards() {
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col bg-black hover:bg-neutral-900 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col  bg-black hover:bg-neutral-900 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col w-full">
+            <div className="flex gap-4 flex-col w-full items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
-                <Image
-                  width={100}
-                  height={100}
+                <img
                   src={card.src}
                   alt={card.title}
-                  className="h-60 w-full rounded-lg object-cover object-top"
+                  className="h-60 w-80 rounded-lg object-cover object-top ]"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
@@ -183,7 +179,7 @@ export const CloseIcon = () => {
 const cards = [
   {
     title: "AI",
-    src: "../assets/ai.jpg",
+    src: "https://imageio.forbes.com/specials-images/imageserve/645b3eca0059191fb09c02fa/15-Amazing-Real-World-Applications-Of-AI-Everyone-Should-Know-About/960x0.jpg?height=400&width=711&fit=bounds",
     content: () => (
       <p>
         Leverage the power of Artificial Intelligence to automate processes,
@@ -193,7 +189,7 @@ const cards = [
   },
   {
     title: "Edge Computing",
-    src: "../assets/edge-computing.jpg",
+    src: "https://www.networkcablingservices.com/wp-content/uploads/2021/11/edge-computing-graphic.jpg",
     content: () => (
       <p>
         Optimize data processing and reduce latency with edge computing
@@ -204,7 +200,7 @@ const cards = [
   },
   {
     title: "Data Analytics",
-    src: "../assets/data-analytics.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeCI9FkSFEJOC_DIK5ZCu5MffwAJ6SJ6uNtQ&s",
     content: () => (
       <p>
         Transform your data into actionable insights with advanced data
@@ -214,7 +210,7 @@ const cards = [
   },
   {
     title: "IoT",
-    src: "../assets/iot.jpg",
+    src: "https://www.ssldragon.com/wp-content/uploads/2023/05/iot-device-certificate.webp",
     content: () => (
       <p>
         Connect devices and systems with Internet of Things (IoT) solutions that
@@ -225,7 +221,7 @@ const cards = [
   },
   {
     title: "Cloud",
-    src: "../assets/cloud.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJUWrYcyY6byzsX3AfL9LbvtpvjPW2KZ5fUQ&s",
     content: () => (
       <p>
         Enhance scalability, flexibility, and security with our cloud computing
@@ -235,7 +231,7 @@ const cards = [
   },
   {
     title: "AR/VR",
-    src: "../assets/ar-vr.jpg",
+    src: "https://media.istockphoto.com/id/1351141161/photo/woman-wearing-vr-glasses-s.webp?b=1&s=170667a&w=0&k=20&c=zRX7KjPUZqm5IgV9FRAXZfp4dJZfiyb8-qgPljvwxYk=",
     content: () => (
       <p>
         Create immersive experiences with Augmented Reality (AR) and Virtual
@@ -246,7 +242,7 @@ const cards = [
   },
   {
     title: "Enterprise Solutions",
-    src: "../assets/enterprise-solutions.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1I1Jl4sRDqug9RnnJI0aYQPER34AK_7qc1g&s",
     content: () => (
       <p>
         Streamline operations and drive growth with enterprise solutions
@@ -256,7 +252,7 @@ const cards = [
   },
   {
     title: "Digital Engineering",
-    src: "../assets/digital-engineering.jpg",
+    src: "https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/06/Digital-Engineering.jpg",
     content: () => (
       <p>
         Innovate and transform your product development process with digital
@@ -267,7 +263,7 @@ const cards = [
   },
   {
     title: "Cognitive Business Operations",
-    src: "../assets/cognitive-business-operations.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLTr17cdQhSzway_yWJTVBRfx9Ow1qDvNG6g&s",
     content: () => (
       <p>
         Enhance business operations with cognitive technologies that automate
@@ -277,7 +273,7 @@ const cards = [
   },
   {
     title: "Networking",
-    src: "../assets/networking.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZqKS_Zh6YdJYet9bHEZcgt-BiRHCRk1o2gQ&s",
     content: () => (
       <p>
         Ensure robust, reliable, and secure communication infrastructure with
@@ -287,7 +283,7 @@ const cards = [
   },
   {
     title: "Digital Marketing",
-    src: "../assets/digital-marketing.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROl5sKvuHGEe2s0D4bHX0NxXtakhxvKyu1Sw&s",
     content: () => (
       <p>
         Boost your online presence and drive customer engagement with our
@@ -297,7 +293,7 @@ const cards = [
   },
   {
     title: "Sustainability",
-    src: "../assets/sustainability.jpg",
+    src: "https://www.spcdn.org/blog/wp-content/uploads/2022/05/sustainable-marketing_elements.jpg",
     content: () => (
       <p>
         Adopt sustainable practices with our eco-friendly solutions designed to
