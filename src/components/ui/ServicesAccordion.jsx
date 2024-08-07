@@ -106,7 +106,7 @@ export function ServicesAccordion() {
       <div className="flex justify-center mt-4">
         <Button
           onClick={() => setShowAll(!showAll)}
-          className="flex items-center gap-2 bg-black border-none hover:bg-neutral-950 transition-all duration-300 ease-in-out"
+          className="flex items-center gap-2 h-[2.5rem] w-[8rem] bg-black border-none hover:bg-neutral-950 transition-all duration-300 ease-in-out"
         >
           {showAll ? "Show less" : "Show more"}
         </Button>

@@ -55,7 +55,8 @@ export function Home() {
           <img
             src={heroPng}
             alt="hero.png"
-            className="h-[20rem] hidden sm:block"
+            className="h-[20rem] hidden sm:block animate-float"
+
           />
         </section>
 

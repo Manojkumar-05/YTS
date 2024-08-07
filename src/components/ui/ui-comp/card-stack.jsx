@@ -85,7 +85,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
       })}
       <div
         className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
-        style={{ left: "-1rem" }}
+        style={{ left: "-3rem" }}
       >
         <button
           className="text-white bg-black p-2 rounded-full shadow-md"
@@ -96,7 +96,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
       </div>
       <div
         className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
-        style={{ right: "-1rem" }}
+        style={{ right: "-3rem" }}
       >
         <button
           className="text-white bg-black p-2 rounded-full shadow-md"

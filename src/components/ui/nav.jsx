@@ -1,10 +1,20 @@
+import { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   Sheet,
   SheetTrigger,
   SheetContent,
 } from "@/components/ui/ui-comp/sheet";
-import { useState, useEffect } from "react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/ui-comp/navigation-menu";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -36,7 +46,7 @@ const Nav = () => {
   return (
     <header
       className={`w-full bg-[#000] px-4 py-3 sm:px-6 md:py-4 fixed top-0 left-0 z-1000 ${
-        showNav ? '' : '-translate-y-full'
+        showNav ? "" : "-translate-y-full"
       } transition-transform duration-300`}
     >
       <div className="container mx-auto flex items-center justify-between">
@@ -44,34 +54,63 @@ const Nav = () => {
           <p className="text-white font-bold text-3xl">YAR</p>
         </Link>
         <nav className="hidden space-x-4 md:flex">
-          <NavLink
-            to="/"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch="false"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="about"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch="false"
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="services"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch="false"
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to="contact"
-            className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch="false"
-          >
-            Contact Us
-          </NavLink>
+          <NavigationMenu>
+            <NavigationMenuList className="flex space-x-4">
+              <NavigationMenuItem>
+                <NavLink
+                  to="/"
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch="false"
+                >
+                  Home
+                </NavLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                  About
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink href="/about/team">
+                    Team
+                  </NavigationMenuLink>
+                  <NavigationMenuLink href="/about/mission">
+                    Mission
+                  </NavigationMenuLink>
+                  <NavigationMenuLink href="/about/careers">
+                    Careers
+                  </NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <NavigationMenuLink href="/services/web-development">
+                    Web Development
+                  </NavigationMenuLink>
+                  <NavigationMenuLink href="/services/mobile-development">
+                    Mobile Development
+                  </NavigationMenuLink>
+                  <NavigationMenuLink href="/services/consulting">
+                    Consulting
+                  </NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavLink
+                  to="contact"
+                  className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch="false"
+                >
+                  Contact Us
+                </NavLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </nav>
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="bg-transparent border-none">
@@ -96,7 +135,7 @@ const Nav = () => {
               >
                 About
               </button>
-             <button
+              <button
                 onClick={() => handleSelect("services")}
                 className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 aria-describedby={undefined}
