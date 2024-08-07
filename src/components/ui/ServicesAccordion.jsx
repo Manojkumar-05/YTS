@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "./ui-comp/accordion";
-import { Button } from "@/components/ui/button";
+import { Button } from "@nextui-org/react"; 
 
 // New data array
 const accordionData = [
@@ -105,7 +105,6 @@ export function ServicesAccordion() {
       </Accordion>
       <div className="flex justify-center mt-4">
         <Button
-          variant="outline"
           onClick={() => setShowAll(!showAll)}
           className="flex items-center gap-2 bg-black border-none hover:bg-neutral-950 transition-all duration-300 ease-in-out"
         >

@@ -75,7 +75,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
               zIndex: cards.length - index, // decrease z-index for the cards that are behind
             }}
           >
-            <p className="text-white font-medium">{card.name}</p>
+            <p className="text-white font-semibold">{card.name}</p>
             <div className="font-normal text-white hidden sm:block">
               {card.content}
             </div>

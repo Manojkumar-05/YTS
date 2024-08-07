@@ -4,7 +4,6 @@ import {
   SheetTrigger,
   SheetContent,
 } from "@/components/ui/ui-comp/sheet";
-import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 const Nav = () => {
@@ -76,10 +75,10 @@ const Nav = () => {
         </nav>
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="bg-transparent border-none">
-            <Button variant="outline" size="icon" className="md:hidden">
+            <div variant="outline" size="icon" className="md:hidden">
               <MenuIcon className="text-white ml-1" />
               <span className="sr-only">Toggle navigation menu</span>
-            </Button>
+            </div>
           </SheetTrigger>
           <SheetContent side="right" className="w-full max-w-xs bg-[#000]">
             <div className="grid gap-4 p-4">

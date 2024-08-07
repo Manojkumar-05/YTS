@@ -1,12 +1,12 @@
 import React from 'react'
-import { Contactus } from '../ui/ui-comp/contactus'
-import { Joinus } from '../ui/ui-comp/joinus'
+import Careers from './Careers'
+import ContactUs from '../ui/ui-comp/contactus'
 
 const Contact = () => {
   return (
     <div>
-      <Contactus />
-      <Joinus />
+      <ContactUs />
+      <Careers />
     </div>
   )
 }

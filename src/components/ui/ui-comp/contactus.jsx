@@ -1,9 +1,9 @@
 import React from "react";
 
-export function ContactUs() {
+const ContactUs = () => {
   return (
     <div className="w-full">
-      <section className="py-12 md:py-24 lg:py-32">
+      <section className="py-12 lg:pt-32">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-4">
@@ -12,7 +12,7 @@ export function ContactUs() {
               </h2>
               <p className="text-muted-foreground md:text-xl">
                 We are here to help you with any inquiries, support, or
-                information you need. Whether you’re interested in our products,
+                information you need. Whether youre interested in our products,
                 services, partnerships, or career opportunities, we look forward
                 to hearing from you.
               </p>
@@ -60,7 +60,7 @@ export function ContactUs() {
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-24 lg:py-32 bg-muted">
+      <section className="py-5 bg-muted">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <div>
@@ -90,35 +90,21 @@ export function ContactUs() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                 Social Media
               </h2>
-              <div className="mt-4 space-y-4">
-                <div className="flex items-center gap-2">
-                  <LinkedinIcon className="h-6 w-6 text-primary" />
-                  <a
-                    href="https://www.linkedin.com/"
-                    className="text-primary hover:underline"
-                  >
-                    YAR Tech Services
+              <div>
+                <div className="mt-4 space-y-4 flex gap-5">
+                  <a href="#" className=" ">
+                    <LinkedinIcon className="h-6 w-6 text-blue-700" />
                   </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <TwitterIcon className="h-6 w-6 text-primary" />
-                  <a
-                    href="https://www.twitter.com/"
-                    className="text-primary hover:underline"
-                  >
-                    @example
+                  <a href="#" className=" ">
+                    <TwitterIcon className="h-6 w-6 text-blue-400" />
                   </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <InstagramIcon className="h-6 w-6 text-primary" />
-                  <a href="#" className="text-primary hover:underline">
-                    @example
+
+                  <a href="#" className=" ">
+                    <InstagramIcon className="h-6 w-6 text-pink-600" />
                   </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FacebookIcon className="h-6 w-6 text-primary" />
-                  <a href="#" className="text-primary hover:underline">
-                    YAR Tech Services
+
+                  <a href="#" className=" ">
+                    <FacebookIcon className="h-6 w-6 text-blue-700" />
                   </a>
                 </div>
               </div>
@@ -128,7 +114,7 @@ export function ContactUs() {
       </section>
     </div>
   );
-}
+};
 
 function InstagramIcon(props) {
   return (
@@ -229,3 +215,24 @@ function TwitterIcon(props) {
     </svg>
   );
 }
+
+function FacebookIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 2h4v4h-4V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2h-2v4h2v8h4v-8h4l-1-4h-3V4h1a2 2 0 0 1 2 2z" />
+    </svg>
+  );
+}
+
+export default ContactUs;

@@ -6,7 +6,7 @@ import { Cardz } from "../ui/ProductCard";
 import heroPng from "../assets/hero.png";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@nextui-org/react";
-import Footer from "../ui/footer";
+
 
 export function Home() {
   const words = ["Modern", "Cutting-Edge", "Cross-Industrial", "Optimized"];
@@ -24,12 +24,12 @@ export function Home() {
             <TextGenerateEffect words={"tech solutions with YAR"} />
             <div className="flex gap-5 my-4 ">
               <Button
-                className="bg-black rounded-lg h-[2.5rem] w-[7rem] "
+                className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold"
                 onClick={() => navigate("/about")}
               >
                 <span>Get Started</span>
               </Button>
-              <Button className="bg-black rounded-lg h-[2.5rem] w-[8rem] ">
+              <Button className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold">
                 Join Now
                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </Button>
