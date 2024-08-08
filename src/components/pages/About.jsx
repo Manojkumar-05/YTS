@@ -12,7 +12,7 @@ import { TextGenerateEffect } from "../ui/ui-comp/text-generate-effect";
 
 const About = () => {
   return (
-    <div className="flex flex-col min-h-dvh font-medium">
+    <div className="flex flex-col min-h-dvh font-medium mt-[-3rem]">
       <section className="w-full py-12 md:py-24 lg:py-32 bg-black h-dvh">
         <div className="mt-[5rem] container px-4 md:px-6 flex flex-col gap-12 text-center justify-center">
           <GradualSpacing
@@ -96,7 +96,7 @@ const About = () => {
           </div>
           <div className="grid gap-6 mt-8 md:grid-cols-3 text-black">
             {cardData.map((item, index) => (
-              <div className="card bg-white rounded-lg p-6 shadow-sm">
+              <div className="card bg-white rounded-lg p-6 shadow-sm" key={index}>
                 <item.icon size={70} className="mx-auto" />
                 <h3 className="text-xl font-bold mt-4">{item.title}</h3>
                 <p className="mt-2">{item.content}</p>

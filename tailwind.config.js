@@ -8,13 +8,12 @@ const {
 // Define the Tailwind CSS configuration
 module.exports = {
   darkMode: "class",
-
   content: [
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(accordion|divider).js",
+    "./node_modules/@nextui-org/theme/dist/components/(accordion|navbar|divider).js"
   ],
 
   prefix: "",

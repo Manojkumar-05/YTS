@@ -1,191 +1,179 @@
-import { useState, useEffect } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-} from "@/components/ui/ui-comp/sheet";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/ui-comp/navigation-menu";
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Button,
+  DropdownItem,
+  DropdownTrigger,
+  Dropdown,
+  DropdownMenu,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
+} from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
-const Nav = () => {
-  const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
+const DropdownIcon = ({ hovered }) => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`feather feather-chevron-down transition-transform ${
+      hovered ? "rotate-180" : ""
+    }`}
+  >
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+);
+
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownHovered, setIsDropdownHovered] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY < lastScrollY || currentScrollY === 0) {
+      if (window.scrollY < lastScrollY || window.scrollY === 0) {
         setShowNav(true);
       } else {
         setShowNav(false);
       }
-      setLastScrollY(currentScrollY);
+      setLastScrollY(window.scrollY);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const handleSelect = (path) => {
-    navigate(path);
-    setOpen(false);
-  };
-
   return (
-    <header
-      className={`w-full bg-[#000] px-4 py-3 sm:px-6 md:py-4 fixed top-0 left-0 z-1000 ${
-        showNav ? "" : "-translate-y-full"
-      } transition-transform duration-300`}
+    <Navbar
+      shouldHideOnScroll
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className={`bg-black text-white font-medium transition-transform duration-300 ${
+        showNav ? "transform translate-y-full" : "transform -translate-y-full"
+      }`}
     >
-      <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2" prefetch="false">
-          <p className="text-white font-bold text-3xl">YAR</p>
-        </Link>
-        <nav className="hidden space-x-4 md:flex">
-          <NavigationMenu>
-            <NavigationMenuList className="flex space-x-4">
-              <NavigationMenuItem>
-                <NavLink
-                  to="/"
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch="false"
-                >
-                  Home
-                </NavLink>
-              </NavigationMenuItem>
+      <NavbarBrand className="text-4xl font-bold">
+        <Link to="/">YAR</Link>
+      </NavbarBrand>
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
+      </NavbarContent>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-                  About
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink href="/about/team">
-                    Team
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href="/about/mission">
-                    Mission
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href="/about/careers">
-                    Careers
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+      <NavbarContent className="hidden sm:flex gap-8" justify="end">
+        <NavbarItem>
+          <Link to="/" className="text-white font-medium">
+            Home
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link to="/about" className="text-white font-medium">
+            About
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link to="/services" className="text-white font-medium">
+            Services
+          </Link>
+        </NavbarItem>
+        <Dropdown isHoverable onOpenChange={setIsDropdownHovered}>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent flex font-medium"
+                endContent={<DropdownIcon hovered={isDropdownHovered} />}
+              >
+                Join Us
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="Join Us features"
+            className="w-[120px] bg-black text-white font-medium p-4"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              className="py-2 hover:bg-neutral-800"
+              key="contact_us"
+            >
+              <Link to="/contact">Contact Us</Link>
+            </DropdownItem>
+            <DropdownItem className="py-2 hover:bg-neutral-800" key="careers">
+              <Link to="/careers">Careers</Link>
+            </DropdownItem>
+            <DropdownItem className="py-2 hover:bg-neutral-800" key="join_us">
+              <Link to="/join">Join Us</Link>
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+      </NavbarContent>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-                  Services
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <NavigationMenuLink href="/services/web-development">
-                    Web Development
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href="/services/mobile-development">
-                    Mobile Development
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href="/services/consulting">
-                    Consulting
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavLink
-                  to="contact"
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-[#000] px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch="false"
-                >
-                  Contact Us
-                </NavLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </nav>
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="bg-transparent border-none">
-            <div variant="outline" size="icon" className="md:hidden">
-              <MenuIcon className="text-white ml-1" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </div>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-full max-w-xs bg-[#000]">
-            <div className="grid gap-4 p-4">
-              <button
-                onClick={() => handleSelect("/")}
-                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                aria-describedby={undefined}
-              >
-                Home
-              </button>
-              <button
-                onClick={() => handleSelect("about")}
-                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                aria-describedby={undefined}
-              >
-                About
-              </button>
-              <button
-                onClick={() => handleSelect("services")}
-                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                aria-describedby={undefined}
-              >
-                Services
-              </button>
-              <button
-                onClick={() => handleSelect("contact")}
-                className="cursor-pointer inline-flex h-9 items-center justify-center rounded-md  px-4 py-2 text-base font-medium text-primary-foreground transition-colors hover:bg-[#000]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                aria-describedby={undefined}
-              >
-                Contact Us
-              </button>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
-    </header>
-  );
-};
-
-function MenuIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
+      <NavbarMenu className="flex flex-col gap-8 justify-center items-center bg-black text-white">
+        <NavbarMenuItem>
+          <Link
+            to="/"
+            className="w-full"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            <div>Home</div>
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            to="/about"
+            className="w-full"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            About
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            to="/services"
+            className="w-full"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            Services
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            to="/careers"
+            className="w-full"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            Careers
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            to="/contact"
+            className="w-full"
+            onClick={() => setIsMenuOpen(false)}
+            size="lg"
+          >
+            Contact Us
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </Navbar>
   );
 }
-
-export default Nav;
-
-// import React from 'react'
-
-// const nav = () => {
-//   return (
-//     <div>nav</div>
-//   )
-// }
-
-// export default nav

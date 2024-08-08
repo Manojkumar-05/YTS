@@ -1,25 +1,35 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "./hooks/use-outside-click";
-import EdgeComputing from "../assets/edge-computing.jpg";
-
+import EdgeComputing from "../assets/Cards/edge-computing.jpg";
+import Ai from "../assets/Cards/ai.jpg";
+import Ar from "../assets/Cards/ARVR.jpg";
+import Cloud from "../assets/Cards/Cloud.jpg";
+import cbu from "../assets/Cards/Cognitive-Business-Operations.jpg";
+import Da from "../assets/Cards/DataAnalytics.jpg";
+import Ds from "../assets/Cards/Digital-Engineering.jpg";
+import Dm from "../assets/Cards/Digital-Marketing.jpg";
+import Es from "../assets/Cards/Enterprise-Solutions.jpg";
+import Iot from "../assets/Cards/IoT.jpg";
+import Net from "../assets/Cards/Networking.jpg";
+import Sus from "../assets/Cards/Sustainability.jpg";
 
 const cards = [
   {
-  // Example : Do it for all like this 
-  title: "Edge Computing",
-  src: EdgeComputing,
-  content: () => (
-    <p>
-      Optimize data processing and reduce latency with edge computing
-      solutions that bring computation closer to the source of data
-      generation.
-    </p>
-  ),
-},
+    // Example : Do it for all like this
+    title: "Edge Computing",
+    src: EdgeComputing,
+    content: () => (
+      <p>
+        Optimize data processing and reduce latency with edge computing
+        solutions that bring computation closer to the source of data
+        generation.
+      </p>
+    ),
+  },
   {
     title: "AI",
-    src: "https://imageio.forbes.com/specials-images/imageserve/645b3eca0059191fb09c02fa/15-Amazing-Real-World-Applications-Of-AI-Everyone-Should-Know-About/960x0.jpg?height=400&width=711&fit=bounds",
+    src: Ai,
     content: () => (
       <p>
         Leverage the power of Artificial Intelligence to automate processes,
@@ -29,7 +39,7 @@ const cards = [
   },
   {
     title: "Data Analytics",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeCI9FkSFEJOC_DIK5ZCu5MffwAJ6SJ6uNtQ&s",
+    src: Da,
     content: () => (
       <p>
         Transform your data into actionable insights with advanced data
@@ -39,7 +49,7 @@ const cards = [
   },
   {
     title: "IoT",
-    src: "https://www.ssldragon.com/wp-content/uploads/2023/05/iot-device-certificate.webp",
+    src: Iot,
     content: () => (
       <p>
         Connect devices and systems with Internet of Things (IoT) solutions that
@@ -50,7 +60,7 @@ const cards = [
   },
   {
     title: "Cloud",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJUWrYcyY6byzsX3AfL9LbvtpvjPW2KZ5fUQ&s",
+    src: Cloud,
     content: () => (
       <p>
         Enhance scalability, flexibility, and security with our cloud computing
@@ -60,7 +70,7 @@ const cards = [
   },
   {
     title: "AR/VR",
-    src: "https://media.istockphoto.com/id/1351141161/photo/woman-wearing-vr-glasses-s.webp?b=1&s=170667a&w=0&k=20&c=zRX7KjPUZqm5IgV9FRAXZfp4dJZfiyb8-qgPljvwxYk=",
+    src: Ar,
     content: () => (
       <p>
         Create immersive experiences with Augmented Reality (AR) and Virtual
@@ -71,7 +81,7 @@ const cards = [
   },
   {
     title: "Enterprise Solutions",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1I1Jl4sRDqug9RnnJI0aYQPER34AK_7qc1g&s",
+    src: Es,
     content: () => (
       <p>
         Streamline operations and drive growth with enterprise solutions
@@ -81,7 +91,7 @@ const cards = [
   },
   {
     title: "Digital Engineering",
-    src: "https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/06/Digital-Engineering.jpg",
+    src: Ds,
     content: () => (
       <p>
         Innovate and transform your product development process with digital
@@ -92,7 +102,7 @@ const cards = [
   },
   {
     title: "Cognitive Business Operations",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLTr17cdQhSzway_yWJTVBRfx9Ow1qDvNG6g&s",
+    src: cbu,
     content: () => (
       <p>
         Enhance business operations with cognitive technologies that automate
@@ -102,7 +112,7 @@ const cards = [
   },
   {
     title: "Networking",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZqKS_Zh6YdJYet9bHEZcgt-BiRHCRk1o2gQ&s",
+    src: Net,
     content: () => (
       <p>
         Ensure robust, reliable, and secure communication infrastructure with
@@ -112,7 +122,7 @@ const cards = [
   },
   {
     title: "Digital Marketing",
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROl5sKvuHGEe2s0D4bHX0NxXtakhxvKyu1Sw&s",
+    src: Dm,
     content: () => (
       <p>
         Boost your online presence and drive customer engagement with our
@@ -122,7 +132,7 @@ const cards = [
   },
   {
     title: "Sustainability",
-    src: "https://www.spcdn.org/blog/wp-content/uploads/2022/05/sustainable-marketing_elements.jpg",
+    src: Sus,
     content: () => (
       <p>
         Adopt sustainable practices with our eco-friendly solutions designed to
@@ -189,7 +199,7 @@ export default function ExpandableCards() {
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
-                  priority
+                  
                   src={active.src}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
@@ -220,7 +230,7 @@ export default function ExpandableCards() {
                     exit={{ opacity: 0 }}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 te"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-[#460073] te"
                   >
                     See More
                   </motion.a>
@@ -288,15 +298,15 @@ export const CloseIcon = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.05 } }}
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="48"
+      height="48"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4 text-black"
+      className="h-12 w-12 text-black"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />

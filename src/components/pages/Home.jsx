@@ -14,7 +14,7 @@ export function Home() {
 
   return (
     <div>
-      <div className="lg:mt-[14rem] mt-[9rem] flex flex-col items-center gap-9 px-4 overflow-auto">
+      <div className="md:mt-[10rem] mt-[4rem] flex flex-col items-center gap-9 px-4 overflow-auto">
         <section className="md:text-3xl lg:text-5xl text-[1.3rem] font-semibold mx-auto flex lg:flex-row gap-10">
           <div>
             <div className="flex">
@@ -29,9 +29,11 @@ export function Home() {
               >
                 <span>Get Started</span>
               </Button>
-              <Button className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold" onClick={() => navigate("/services")}>
-                Join Now
-                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+              <Button
+                className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold flex"
+                onClick={() => navigate("/services")}
+              >
+                <span>Join Now</span> <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </Button>
             </div>
             <div className="flex flex-col gap-10 font-medium text-base md:text-2xl my-[2rem] md:flex-row ">
@@ -56,7 +58,6 @@ export function Home() {
             src={heroPng}
             alt="hero.png"
             className="h-[20rem] hidden sm:block animate-float"
-
           />
         </section>
 

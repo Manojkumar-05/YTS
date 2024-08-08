@@ -83,10 +83,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
           </motion.div>
         );
       })}
-      <div
-        className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
-        style={{ left: "-3rem" }}
-      >
+      <div className="absolute top-1/2 transform -translate-y-1/2 z-10 left-[-1rem] lg:left-[-3rem]">
         <button
           className="text-white bg-black p-2 rounded-full shadow-md"
           onClick={handlePrev}
@@ -94,10 +91,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
           <FaArrowLeft />
         </button>
       </div>
-      <div
-        className="absolute top-1/2 transform -translate-y-1/2 z-10 hidden md:block"
-        style={{ right: "-3rem" }}
-      >
+      <div className="absolute top-1/2 transform -translate-y-1/2 z-10  right-[.5rem] lg:right-[-3rem]">
         <button
           className="text-white bg-black p-2 rounded-full shadow-md"
           onClick={handleNext}

@@ -4,8 +4,8 @@ import Services from "./components/pages/Services";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import { Home } from "./components/pages/Home";
-import Footer from "./components/ui/footer";
 import Careers from "./components/pages/Careers";
+import Join from "./components/pages/Join";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/join" element={<Contact />} />
+          <Route path="/join" element={<Join />} />
         </Routes>
       </div>
     </BrowserRouter>

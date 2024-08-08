@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="w-full">
-      <section className="py-12 lg:pt-32">
+    <div className="w-full h-dvh">
+      <section className="py-12 ">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <motion.div
@@ -92,12 +92,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">Regional Offices</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>Madurai</li>
-                    <li>Coimbatore</li>
-                    <li>Chennai</li>
-                    <li>Bangalore</li>
-                  </ul>
+                  <p>Madurai, Coimbatore, Chennai, Banglore</p>
                 </div>
               </div>
             </motion.div>
@@ -109,21 +104,20 @@ const Contact = () => {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                 Social Media
               </h2>
-              <div>
-                <div className="mt-4 space-y-4 flex gap-5">
-                  <a href="#" className="">
-                    <LinkedinIcon className="h-6 w-6 text-blue-700 hover:scale-110 transition-transform duration-200" />
-                  </a>
-                  <a href="#" className="">
-                    <TwitterIcon className="h-6 w-6 text-blue-400 hover:scale-110 transition-transform duration-200" />
-                  </a>
-                  <a href="#" className="">
-                    <InstagramIcon className="h-6 w-6 text-pink-600 hover:scale-110 transition-transform duration-200" />
-                  </a>
-                  <a href="#" className="">
-                    <FacebookIcon className="h-6 w-6 text-blue-700 hover:scale-110 transition-transform duration-200" />
-                  </a>
-                </div>
+
+              <div className="mt-4 space-y-4 flex gap-5">
+                <a href="#" className="">
+                  <LinkedinIcon className="h-6 w-6 text-blue-700 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="#" className="">
+                  <TwitterIcon className="h-6 w-6 text-blue-400 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="#" className="">
+                  <InstagramIcon className="h-6 w-6 text-pink-600 hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a href="#" className="">
+                  <FacebookIcon className="h-6 w-6 text-blue-700 hover:scale-110 transition-transform duration-200" />
+                </a>
               </div>
             </motion.div>
           </div>
