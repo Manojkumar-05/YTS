@@ -29,7 +29,7 @@ export function Home() {
               >
                 <span>Get Started</span>
               </Button>
-              <Button className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold">
+              <Button className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold" onClick={() => navigate("/services")}>
                 Join Now
                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </Button>

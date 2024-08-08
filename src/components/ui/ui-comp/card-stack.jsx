@@ -57,7 +57,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
 
   return (
     <div
-      className="relative h-60 w-full md:w-[48rem] mb-10"
+      className="relative h-60 w-full md:w-[48rem] mb-10 ml-6"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

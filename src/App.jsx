@@ -20,7 +20,6 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/join" element={<Contact />} />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   );
