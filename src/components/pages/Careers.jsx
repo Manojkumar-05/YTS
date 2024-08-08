@@ -1,6 +1,9 @@
-import React from "react";
+import { Button } from "@nextui-org/react";
+import { ArrowRightIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Careers = () => {
+  const navigate = useNavigate()
   const jobOpenings = [
     {
       title: "Software Developers",
@@ -47,13 +50,18 @@ const Careers = () => {
   ];
 
   return (
-    <div className="w-full py-12 md:py-24 lg:py-32">
+    <div className="w-full py-12 md:mt-[-5rem] mt-[0rem] md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-2">
           <h1 className="text-4xl font-bold ">Careers</h1>
-          <p className="text-xl  mt-4">
-            Join Our Team and Build the Future
-          </p>
+          <p className="text-xl  mt-4">Join Our Team and Build the Future</p>
+          {/* <Button
+            className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold flex"
+            onClick={() => navigate("/services")}
+          >
+            <span>Join Now</span>{" "}
+            <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </Button> */}
           <p className="text-lg  mt-2">
             At YAR Tech Services, we are passionate about innovation,
             cutting-edge technologies, and making a positive impact on the
@@ -65,9 +73,7 @@ const Careers = () => {
 
         <div className="space-y-12">
           <div>
-            <h2 className="text-3xl font-semibold ">
-              Why Work with Us?
-            </h2>
+            <h2 className="text-3xl font-semibold ">Why Work with Us?</h2>
             <ul className="list-disc list-inside mt-4 space-y-2 ">
               <li>
                 Innovative Environment: Be part of a culture that encourages
@@ -93,15 +99,14 @@ const Careers = () => {
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold ">
-              Current Openings
-            </h2>
+            <h2 className="text-3xl font-semibold ">Current Openings</h2>
             <div className="mt-4 space-y-8">
               {jobOpenings.map((job, index) => (
-                <div key={index} className="p-6 bg-white text-black rounded-lg shadow-lg">
-                  <h3 className="text-2xl font-bold ">
-                    {job.title}
-                  </h3>
+                <div
+                  key={index}
+                  className="p-6 bg-white text-black rounded-lg shadow-lg"
+                >
+                  <h3 className="text-2xl font-bold ">{job.title}</h3>
                   <p className=" mt-2">{job.description}</p>
                   <p className=" mt-2">
                     <span className="font-semibold">Requirements:</span>{" "}
@@ -113,9 +118,7 @@ const Careers = () => {
           </div>
 
           <div className="text-center mt-12">
-            <h2 className="text-3xl font-semibold ">
-              How to Apply
-            </h2>
+            <h2 className="text-3xl font-semibold ">How to Apply</h2>
             <p className=" mt-4">
               If you are ready to take your career to the next level and be part
               of a team that is shaping the future, we would love to hear from

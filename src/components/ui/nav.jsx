@@ -4,16 +4,17 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
   Button,
   DropdownItem,
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
-  NavbarMenuToggle,
-  NavbarMenuItem,
-  NavbarMenu,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import DropDownButton from "./ui-comp/dropDown";
 
 const DropdownIcon = ({ hovered }) => (
   <svg
@@ -87,18 +88,16 @@ export default function App() {
             Services
           </Link>
         </NavbarItem>
-        <Dropdown isHoverable onOpenChange={setIsDropdownHovered}>
-          <NavbarItem>
-            <DropdownTrigger>
-              <Button
-                disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent flex font-medium"
-                endContent={<DropdownIcon hovered={isDropdownHovered} />}
-              >
-                Join Us
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
+        {/* <Dropdown isHoverable onOpenChange={setIsDropdownHovered} disableRipple>
+          <DropdownTrigger>
+            <Button
+              disableRipple
+              className="p-0 bg-transparent data-[hover=true]:bg-transparent flex font-medium"
+              endContent={<DropdownIcon hovered={isDropdownHovered} />}
+            >
+              Contact
+            </Button>
+          </DropdownTrigger>
           <DropdownMenu
             aria-label="Join Us features"
             className="w-[120px] bg-black text-white font-medium p-4"
@@ -110,16 +109,23 @@ export default function App() {
               className="py-2 hover:bg-neutral-800"
               key="contact_us"
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact" className="w-full h-full">
+                Contact Us
+              </Link>
             </DropdownItem>
             <DropdownItem className="py-2 hover:bg-neutral-800" key="careers">
-              <Link to="/careers">Careers</Link>
+              <Link to="/careers" className="w-full h-full">
+                Careers
+              </Link>
             </DropdownItem>
             <DropdownItem className="py-2 hover:bg-neutral-800" key="join_us">
-              <Link to="/join">Join Us</Link>
+              <Link to="/join" className="w-full h-full">
+                Join Us
+              </Link>
             </DropdownItem>
           </DropdownMenu>
-        </Dropdown>
+        </Dropdown> */}
+        <DropDownButton />
       </NavbarContent>
 
       <NavbarMenu className="flex flex-col gap-8 justify-center items-center bg-black text-white">

@@ -6,6 +6,7 @@ import Contact from "./components/pages/Contact";
 import { Home } from "./components/pages/Home";
 import Careers from "./components/pages/Careers";
 import Join from "./components/pages/Join";
+import BackToTopButton from "./components/ui/ui-comp/backToTop";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/join" element={<Join />} />
         </Routes>
+        <BackToTopButton />
       </div>
     </BrowserRouter>
   );
