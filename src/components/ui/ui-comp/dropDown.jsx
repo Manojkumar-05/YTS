@@ -4,7 +4,7 @@ const DropdownButton = () => {
   return (
     <div className="relative inline-block text-left">
       <div className="group inline-block">
-        <button className="inline-flex justify-center w-full  py-2  text-sm font-medium text-white bg-black border border-none rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <button className="inline-flex justify-center w-full focus:outline-none py-2  text-sm font-medium text-white bg-black border border-none rounded-md">
           <span>Contact</span>
           <svg
             className="w-5 h-5 ml-2 -mr-1 text-white transform transition-transform duration-200 group-hover:rotate-180"
