@@ -1,13 +1,10 @@
 
 import { useNavigate } from "react-router-dom";
-import { Separator } from "../ui/separator";
-
 const Careers = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <Separator className="bg-white"/>
       <div className="w-full py-12 md:mt-[-5rem] mt-0 md:pt-24 lg:pt-32 ">
         <div className="container mx-auto px-4 md:px-8 lg:px-12">
           <div className="text-center mb-10">
@@ -91,7 +88,7 @@ const Careers = () => {
                 transform the world.
               </p>
               <button
-                onClick={() => navigate("/apply")}
+                onClick={() => navigate("/join")}
                 className="mt-8 px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-purple-700 transition-all duration-300"
               >
                 Explore Open Positions

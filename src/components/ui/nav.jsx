@@ -65,7 +65,12 @@ export default function Nav() {
       }`}
     >
       <NavbarBrand className="text-4xl font-bold">
-        <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/">YAR</Link>
+        <Link
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          to="/"
+        >
+          YAR
+        </Link>
       </NavbarBrand>
       <NavbarContent className="sm:hidden" justify="end">
         <NavbarMenuToggle
@@ -75,22 +80,38 @@ export default function Nav() {
 
       <NavbarContent className="hidden sm:flex gap-8" justify="end">
         <NavbarItem>
-          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/" className="text-white font-medium">
+          <Link
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            to="/"
+            className="text-white font-medium"
+          >
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/about" className="text-white font-medium">
+          <Link
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            to="/about"
+            className="text-white font-medium"
+          >
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/services" className="text-white font-medium">
+          <Link
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            to="/services"
+            className="text-white font-medium"
+          >
             Services
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/contact" className="text-white font-medium">
+          <Link
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            to="/contact"
+            className="text-white font-medium"
+          >
             Contact Us
           </Link>
         </NavbarItem>
@@ -103,7 +124,10 @@ export default function Nav() {
           <Link
             to="/"
             className="w-full"
-            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             size="lg"
           >
             <div>Home</div>
@@ -113,7 +137,10 @@ export default function Nav() {
           <Link
             to="/about"
             className="w-full"
-            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             size="lg"
           >
             About
@@ -123,7 +150,10 @@ export default function Nav() {
           <Link
             to="/services"
             className="w-full"
-            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             size="lg"
           >
             Services
@@ -133,7 +163,10 @@ export default function Nav() {
           <Link
             to="/contact"
             className="w-full"
-            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             size="lg"
           >
             Contact Us

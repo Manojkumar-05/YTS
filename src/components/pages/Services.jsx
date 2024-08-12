@@ -1,12 +1,18 @@
 import React from "react";
 import ExpandableCards from "../ui/expandable-cards";
 import { ServicesAccordion } from "../ui/ServicesAccordion";
+import {motion} from "framer-motion"
 
 const Services = () => {
   return (
     <div className="min-h-screen overflow-auto pt-16 text-white mt-[-3rem]">
       <div className="max-w-6xl mx-auto p-8">
-        <div className="mb-16">
+        <motion.div
+          className="space-y-4 mb-16"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h1 className="text-4xl font-bold mb-4">Our Services</h1>
           <p className="text-lg mb-8">
             At YAR Tech Services, we offer a comprehensive suite of services
@@ -23,7 +29,7 @@ const Services = () => {
             business goals and stay ahead in an ever-evolving technological
             landscape.
           </p>
-        </div>
+        </motion.div>
         <div>
           <h1 className="text-4xl font-bold mb-4">Industries We Serve</h1>
           <p className="text-lg mb-8">
@@ -48,4 +54,3 @@ const Services = () => {
 };
 
 export default Services;
-  

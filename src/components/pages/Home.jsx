@@ -15,7 +15,7 @@ export function Home() {
 
   return (
     <div>
-      <div className="md:mt-[10rem] mt-[4rem] flex flex-col items-center gap-9 px-4 overflow-auto w-svw">
+      <div className="md:mt-[8rem] mt-[4rem] flex flex-col items-center gap-9 px-4 overflow-auto  ">
         <section className="md:text-3xl lg:text-5xl text-[1.3rem] font-semibold mx-auto flex lg:flex-row gap-10">
           <div>
             <div className="flex">
@@ -23,6 +23,11 @@ export function Home() {
               <FlipWords words={words} /> <br />
             </div>
             <TextGenerateEffect words={"tech solutions with YAR"} />
+            <p className="md:text-base text-sm font-medium md:m-3  my-3 max-w-[30rem]">
+              "YAR Tech Services drives innovation and sustainable growth with
+              cutting-edge solutions tailored to your industry's unique needs.
+              Elevate your business with our expertise in advanced technologies.
+            </p>
             <div className="flex gap-5 my-4 ">
               <Button
                 className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold"
@@ -34,7 +39,8 @@ export function Home() {
                 className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold flex"
                 onClick={() => navigate("/join")}
               >
-                <span>Join Now</span> <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                <span>Join Now</span>{" "}
+                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </Button>
             </div>
             <div className="flex flex-col gap-10 font-medium text-base md:text-2xl my-[2rem] md:flex-row ">

@@ -14,19 +14,12 @@ import Careers from "./Careers";
 const About = () => {
   return (
     <div className="flex flex-col min-h-dvh font-medium mt-[-3rem]">
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-black h-dvh">
+      <section className="w-full py-12 md:py-24 lg:py- bg-black h-dvh">
         <div className="mt-[5rem] container px-4 md:px-6 flex flex-col gap-12 text-center justify-center">
           <GradualSpacing
             className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
             text="About Us"
           />
-          {/* <p className="mx-auto max-w-[700px] text-lg md:text-xl mt-4">
-            Welcome to YAR Tech Services, where we transform visions into
-            reality. As a premier Product Development, Software Development,
-            consulting, and business solutions organization, we have been
-            partnering with businesses for the past four years, driving success
-            through innovative approaches and state-of-the-art technologies.
-          </p> */}
           <TextGenerateEffect
             className="mx-auto max-w-[700px] text-lg md:text-xl mt-4"
             words={
@@ -97,24 +90,27 @@ const About = () => {
           </div>
           <div className="grid gap-6 mt-8 md:grid-cols-3 text-black">
             {cardData.map((item, index) => (
-              <div className="card bg-white rounded-lg p-6 shadow-sm" key={index}>
+              <div
+                className="card bg-white rounded-lg p-6 shadow-sm"
+                key={index}
+              >
                 <item.icon size={70} className="mx-auto" />
                 <h3 className="text-xl font-bold mt-4">{item.title}</h3>
                 <p className="mt-2">{item.content}</p>
               </div>
             ))}
           </div>
-            <div className="space-y-4 text-center mt-10">
-              <p className="mx-auto max-w-[700px]">
-                At YAR Tech Services, our commitment to education and innovation
-                is reflected in these strategic partnerships, which aim to
-                empower the next generation of leaders and innovators. Together,
-                we are building a brighter, more technologically advanced
-                future.
-              </p>
-            </div>
+          <div className="space-y-4 text-center mt-10">
+            <p className="mx-auto max-w-[700px]">
+              At YAR Tech Services, our commitment to education and innovation
+              is reflected in these strategic partnerships, which aim to empower
+              the next generation of leaders and innovators. Together, we are
+              building a brighter, more technologically advanced future.
+            </p>
+          </div>
         </div>
       </section>
+      <div className="border-t border-1 border-white mx-4 "></div>
       <Careers />
     </div>
   );
