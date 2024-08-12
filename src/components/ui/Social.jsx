@@ -14,7 +14,7 @@ const socialMediaLinks = [
     url: "https://wa.me/message/GN4Y7XYZAYUEI1",
     qr: WhatsApp,
     icon: <IconBrandWhatsapp className="h-10 w-10 text-green-400" />,
-    color: "bg-green-400", // Change text color to bg color
+    color: "bg-green-500", // Change text color to bg color
   },
   {
     name: "LinkedIn",

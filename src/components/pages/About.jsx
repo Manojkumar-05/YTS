@@ -13,7 +13,7 @@ import Careers from "./Careers";
 
 const About = () => {
   return (
-    <div className="flex flex-col min-h-dvh font-medium mt-[-3rem]">
+    <div className="flex flex-col min-h-dvh font-medium lg:mt-[-3rem]">
       <section className="w-full py-12 md:py-24 lg:py- bg-black h-dvh">
         <div className="mt-[5rem] container px-4 md:px-6 flex flex-col gap-12 text-center justify-center">
           <GradualSpacing
@@ -56,8 +56,9 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-        <div className="text-black  container px-4 md:px-6">
+      <div className="border-t border-1 border-white mx-12" />
+      <section className="w-full py-12 md:py-24 lg:py-32 ">
+        <div className=" container px-4 md:px-6">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               What We Do
@@ -75,6 +76,7 @@ const About = () => {
         </div>
       </section>
 
+      <div className="border-t border-1 border-white mx-12" />
       <section className="w-full py-12 md:py-24 lg:py-32 font-normal">
         <div className=" container px-4 md:px-6">
           <div className="space-y-4 text-center">
@@ -110,7 +112,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="border-t border-1 border-white mx-4 "></div>
+      <div className="border-t border-1 border-white mx-12" />
       <Careers />
     </div>
   );

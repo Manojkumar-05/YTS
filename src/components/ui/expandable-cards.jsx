@@ -223,7 +223,7 @@ export default function ExpandableCards() {
                     </motion.p>
                   </div>
 
-                  <motion.a
+                  {/* <motion.a
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -233,7 +233,7 @@ export default function ExpandableCards() {
                     className="px-4 py-3 text-sm rounded-full font-bold bg-[#460073] te"
                   >
                     See More
-                  </motion.a>
+                  </motion.a> */}
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div

@@ -28,35 +28,35 @@ const Careers = () => {
               </h2>
               <ul className="list-disc list-inside mt-4 space-y-4 text-gray-600">
                 <li>
-                  <span className="font-semibold text-gray-800">
+                  <span className="font-semibold text-gray-800 ">
                     Innovative Environment:
                   </span>{" "}
                   Be part of a culture that encourages creativity, innovation,
                   and continuous learning.
                 </li>
                 <li>
-                  <span className="font-semibold text-gray-800">
+                  <span className="font-semibold text-gray-800 ">
                     Cutting-Edge Technologies:
                   </span>{" "}
-                  Work on projects that utilize the latest technologies and
+                  Projects that utilize latest technologies and
                   shape the future of various industries.
                 </li>
                 <li>
-                  <span className="font-semibold text-gray-800">
+                  <span className="font-semibold text-gray-800 ">
                     Collaborative Culture:
                   </span>{" "}
                   Join a team that values collaboration, open communication, and
                   mutual respect.
                 </li>
                 <li>
-                  <span className="font-semibold text-gray-800">
+                  <span className="font-semibold text-gray-800 ">
                     Professional Growth:
                   </span>{" "}
                   Access opportunities for professional development, training,
                   and career advancement.
                 </li>
                 <li>
-                  <span className="font-semibold text-gray-800">
+                  <span className="font-semibold text-gray-800 ">
                     Impactful Work:
                   </span>{" "}
                   Contribute to meaningful projects that make a difference in
@@ -69,7 +69,7 @@ const Careers = () => {
               <h2 className="text-3xl font-semibold text-white  ">
                 How to Apply
               </h2>
-              <p className="mt-4 text-white leading-relaxed">
+              <p className="mt-4 text-neutral-300 leading-relaxed">
                 If you are ready to take your career to the next level and be
                 part of a team that is shaping the future, we would love to hear
                 from you. Please send your resume and a cover letter to{" "}
@@ -82,7 +82,7 @@ const Careers = () => {
                 . Be sure to specify the position you are applying for in the
                 subject line.
               </p>
-              <p className="mt-4 text-white leading-relaxed">
+              <p className="mt-4 text-neutral-300 leading-relaxed">
                 Join YAR Tech Services and help us build wonders through
                 innovation and cutting-edge technologies. Together, we can
                 transform the world.

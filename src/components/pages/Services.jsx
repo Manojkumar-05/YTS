@@ -30,6 +30,7 @@ const Services = () => {
             landscape.
           </p>
         </motion.div>
+        <div className="border-t border-1 border-white my-8"/>
         <div>
           <h1 className="text-4xl font-bold mb-4">Industries We Serve</h1>
           <p className="text-lg mb-8">

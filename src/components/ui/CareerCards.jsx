@@ -82,7 +82,10 @@ export function CareerCards() {
       <h1 className="text-xl font-semibold md:text-2xl lg:text-4xl">
         Current Openings
       </h1>
-      <Marquee pauseOnHover className="[--duration:20s] w-full">
+      <Marquee
+        pauseOnHover
+        className="md:[--duration:25s] [--duration:10s] w-full"
+      >
         {firstRow.map((jobOpenings) => (
           <ReviewCard key={jobOpenings.title} {...jobOpenings} />
         ))}

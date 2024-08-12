@@ -14,6 +14,7 @@ import {
   DropdownMenu,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import logo from "../assets/YAR-Logo.png"
 import DropDownButton from "./ui-comp/dropDown";
 
 const DropdownIcon = ({ hovered }) => (
@@ -68,7 +69,9 @@ export default function Nav() {
         <Link
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           to="/"
+          className="flex gap-2 justify-center items-center"
         >
+         <img className="rounded-full w-12"  src={logo} />
           YAR
         </Link>
       </NavbarBrand>
