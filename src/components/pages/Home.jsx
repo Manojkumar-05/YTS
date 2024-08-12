@@ -24,7 +24,7 @@ export function Home() {
             </div>
             <TextGenerateEffect words={"tech solutions with YAR"} />
             <p className="md:text-base text-sm font-medium md:m-3  my-3 max-w-[30rem]">
-              "YAR Tech Services drives innovation and sustainable growth with
+              YAR Tech Services drives innovation and sustainable growth with
               cutting-edge solutions tailored to your industry's unique needs.
               Elevate your business with our expertise in advanced technologies.
             </p>

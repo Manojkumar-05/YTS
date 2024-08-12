@@ -16,16 +16,16 @@ const Footer = () => {
               YAR
             </Link>
 
-          {/* Get in Touch Section */}
-          <div className="flex-1 mb-6 md:mb-0 md:w-[20rem]">
-            <h2 className="font-semibold tracking-tighter uppercase text-white">
-              Get in Touch 
-            </h2>
-            <p className="text-neutral-400 mt-2">
-              We are here to help you with any inquiries, support, or
-              information you need.
-            </p>
-          </div>
+            {/* Get in Touch Section */}
+            <div className="flex-1 mb-6 md:mb-0 md:w-[20rem]">
+              <h2 className="font-semibold tracking-tighter uppercase text-white">
+                Get in Touch
+              </h2>
+              <p className="text-neutral-400 mt-2">
+                We are here to help you with any inquiries, support, or
+                information you need.
+              </p>
+            </div>
           </div>
 
           {/* Social Links Section */}
@@ -99,6 +99,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="text-center py-4 text-sm text-gray-500">
+        © {new Date().getFullYear()} YAR Tech Services. All rights reserved. - yarts.in
       </div>
     </footer>
   );

@@ -13,21 +13,21 @@ const socialMediaLinks = [
     name: "WhatsApp",
     url: "https://wa.me/message/GN4Y7XYZAYUEI1",
     qr: WhatsApp,
-    icon: <IconBrandWhatsapp className="h-6 w-6 text-green-400" />,
+    icon: <IconBrandWhatsapp className="h-10 w-10 text-green-400" />,
     color: "bg-green-400", // Change text color to bg color
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/yar-tech-services-2957b931b",
     qr: LinkedIn,
-    icon: <IconBrandLinkedin className="h-6 w-6 text-blue-700" />,
+    icon: <IconBrandLinkedin className="h-10 w-10 text-blue-700" />,
     color: "bg-blue-700", // Change text color to bg color
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/yar_tech_service?utm_source=qr&igsh=dWUxdzl6NG03MWh0",
     qr: Instagram,
-    icon: <IconBrandInstagram className="h-6 w-6 text-pink-500" />,
+    icon: <IconBrandInstagram className="h-10 w-10 text-pink-500" />,
     color: "bg-pink-500", // Change text color to bg color
   },
 ];
@@ -88,7 +88,7 @@ const SocialMediaLinks = () => {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
           Social Media
         </h2>
-        <div className="flex gap-3 mt-5 transition-all ease-in-out duration-300">
+        <div className="flex gap-3 mt-5 transition-all ease-in-out duration-300 ml-[1rem]">
           {socialMediaLinks.map((media) => (
             <button
               key={media.name}
