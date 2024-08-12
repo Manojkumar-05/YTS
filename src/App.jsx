@@ -7,7 +7,7 @@ import { Home } from "./components/pages/Home";
 import Careers from "./components/pages/Careers";
 import Join from "./components/pages/Join";
 import BackToTopButton from "./components/ui/ui-comp/backToTop";
-import Footer from "./components/ui/footer";
+import FooterWrapper from "./components/ui/wrapper/footerWrapper";
 
 function App() {
   return (
@@ -18,12 +18,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/join" element={<Join />} />
         </Routes>
-        {/* <Contact /> */}
-        <Footer />
+        <FooterWrapper />
         <BackToTopButton />
       </div>
     </BrowserRouter>

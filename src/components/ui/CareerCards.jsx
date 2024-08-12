@@ -51,22 +51,25 @@ const ReviewCard = ({ title, description, requirements }) => {
   return (
     <figure
       className={cn(
-        "relative max-w-[500px] h-[180px] cursor-pointer overflow-hidden rounded-xl p-4 md:shadow-xl",
-        "bg-neutral-200  hover:bg-[#8a31c2dd] hover:text-white text-black transition-all duration-300 ease-in-out"
+        "relative md:w-[500px] w-[200px] h-auto cursor-pointer overflow-hidden rounded-xl p-4 shadow-md",
+        "bg-neutral-200 hover:bg-[#8a31c2dd] hover:text-white text-black transition-all duration-300 ease-in-out",
+        "md:h-[180px] "
       )}
     >
       <div className="flex flex-row items-center gap-2">
         {/* <img className="rounded-full" width="32" height="32" alt="" src={} /> */}
         <div className="flex flex-col">
-          <figcaption className="text-lg font-semibold ">{title}</figcaption>
+          <figcaption className="text-base font-semibold md:text-lg">
+            {title}
+          </figcaption>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm font-medium">
-        <span className="font-bold">Description : </span>
+      <blockquote className="mt-2 text-xs font-medium md:text-sm">
+        <span className="font-bold">Description: </span>
         {description}
       </blockquote>
-      <blockquote className="mt-2 text-sm font-medium">
-        <span className="font-bold">Requirements : </span>
+      <blockquote className="mt-2 text-xs font-medium md:text-sm">
+        <span className="font-bold">Requirements: </span>
         {requirements}
       </blockquote>
     </figure>
@@ -75,10 +78,11 @@ const ReviewCard = ({ title, description, requirements }) => {
 
 export function CareerCards() {
   return (
-    // <div className="flex flex-col justify-center items-center mt-20 gap-5">
-    <div className="relative flex h-[300px] w-full flex-col items-center justify-center overflow-hidden rounded-lg gap-10 lg:mt-[6rem] mt-[1rem]">
-      <h1 className="md:text-4xl text-2xl font-semibold">Current Openings</h1>
-      <Marquee pauseOnHover className="[--duration:20s]">
+    <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg gap-6 lg:gap-10 mt-5 lg:mt-[6rem]">
+      <h1 className="text-xl font-semibold md:text-2xl lg:text-4xl">
+        Current Openings
+      </h1>
+      <Marquee pauseOnHover className="[--duration:20s] w-full">
         {firstRow.map((jobOpenings) => (
           <ReviewCard key={jobOpenings.title} {...jobOpenings} />
         ))}
@@ -86,6 +90,5 @@ export function CareerCards() {
       {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div> */}
     </div>
-    // </div>
   );
 }

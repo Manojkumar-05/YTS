@@ -10,11 +10,12 @@ import {
 } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
+import SocialMediaLinks from "../ui/Social";
 // import exp from "constants";/
 
 const Contact = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-dvh">
       <section className="pt-12 pb-8">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
@@ -35,7 +36,7 @@ const Contact = () => {
               </p>
               <Link
                 className="bg-black rounded-lg h-[2.5rem] w-[8rem] font-semibold flex justify-center items-center "
-                to = "/join"
+                to="/join"
               >
                 <span>Join Now</span>{" "}
                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
@@ -82,9 +83,9 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-                <p className=" md:text-xl">
-                  Support Hours: Monday to Sunday, 9:00 AM – 10:00 PM
-                </p>
+              <p className=" md:text-xl">
+                Support Hours: Monday to Sunday, 9:00 AM – 10:00 PM
+              </p>
             </motion.div>
           </div>
         </div>
@@ -95,66 +96,10 @@ const Contact = () => {
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5 }}
+              className="pb-8"
             >
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Social Media
-              </h2>
-              <div className="flex gap-3 mt-5">
-                <a
-                  href="https://wa.me/message/GN4Y7XYZAYUEI1"
-                  target="_blank"
-                  className=""
-                >
-                  <IconBrandWhatsapp className="h-6 w-6 text-green-400 hover:scale-110 transition-transform duration-200" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/yar-tech-services-2957b931b"
-                  target="_blank"
-                  className=""
-                >
-                  <IconBrandLinkedin className="h-6 w-6 text-blue-700 hover:scale-110 transition-transform duration-200" />
-                </a>
-                <a
-                  href="https://www.instagram.com/yar_tech_service?utm_source=qr&igsh=dWUxdzl6NG03MWh0"
-                  target="_blank"
-                  className=""
-                >
-                  <IconBrandInstagram className="h-6 w-6 text-pink-500 hover:scale-110 transition-transform duration-200" />
-                </a>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                QR
-              </h2>
-              <div className="flex gap-3 mt-5">
-                <a
-                  href="https://wa.me/message/GN4Y7XYZAYUEI1"
-                  target="_blank"
-                  className=""
-                >
-                  <IconBrandWhatsapp className="h-6 w-6 text-green-400 hover:scale-110 transition-transform duration-200" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/yar-tech-services-2957b931b"
-                  target="_blank"
-                  className=""
-                >
-                  <IconBrandLinkedin className="h-6 w-6 text-blue-700 hover:scale-110 transition-transform duration-200" />
-                </a>
-                <a
-                  href="https://www.instagram.com/yar_tech_service?utm_source=qr&igsh=dWUxdzl6NG03MWh0"
-                  target="_blank"
-                  className=""
-                >
-                  <IconBrandInstagram className="h-6 w-6 text-pink-500 hover:scale-110 transition-transform duration-200" />
-                </a>
-              </div>
+              <SocialMediaLinks />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -50 }}
