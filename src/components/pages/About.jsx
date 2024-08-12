@@ -147,7 +147,7 @@ const cardData = [
     icon: IconGlobe,
     title: "International Schools",
     content:
-      "We collaborate with international schools to introduce advanced technology curricula and extracurricular programs, fostering a global perspective and preparing students for the digital future.",
+      "We collaborate with international schools to introduce advanced technology curricular and extracurricular programs, fostering a global perspective and preparing students for the digital future.",
   },
   {
     icon: IconDeviceLaptop,
