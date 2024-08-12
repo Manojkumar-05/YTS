@@ -7,11 +7,12 @@ import { Home } from "./components/pages/Home";
 import Careers from "./components/pages/Careers";
 import Join from "./components/pages/Join";
 import BackToTopButton from "./components/ui/ui-comp/backToTop";
+import Footer from "./components/ui/footer";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="font-Montserrat w-[100%] flex flex-col overflow-auto scroll-smooth bg-[#460073] text-white">
+      <div className="font-Montserrat flex flex-col overflow-auto scroll-smooth bg-[#460073] text-white">
         <Nav />
         <Routes className="flex-grow">
           <Route path="/" element={<Home />} />
@@ -21,6 +22,8 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/join" element={<Join />} />
         </Routes>
+        {/* <Contact /> */}
+        <Footer />
         <BackToTopButton />
       </div>
     </BrowserRouter>

@@ -3,54 +3,10 @@ import { ArrowRightIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Careers = () => {
-  const navigate = useNavigate()
-  const jobOpenings = [
-    {
-      title: "Software Developers",
-      description:
-        "Develop and maintain software solutions across various platforms.",
-      requirements:
-        "Proficiency in programming languages such as Java, Python, or C++; experience with software development lifecycle.",
-    },
-    {
-      title: "Product Managers",
-      description:
-        "Oversee product development from ideation to launch, ensuring alignment with business goals.",
-      requirements:
-        "Strong project management skills, experience in product development, excellent communication abilities.",
-    },
-    {
-      title: "Data Analysts",
-      description:
-        "Analyze data to provide insights that drive business decisions and strategies.",
-      requirements:
-        "Proficiency in data analysis tools, strong analytical skills, experience with big data technologies.",
-    },
-    {
-      title: "IoT Engineers",
-      description:
-        "Design and implement IoT solutions to enhance connectivity and automation.",
-      requirements:
-        "Experience with IoT platforms and devices, strong problem-solving skills, knowledge of networking protocols.",
-    },
-    {
-      title: "AI Specialists",
-      description:
-        "Develop and integrate AI solutions to improve product functionality and user experience.",
-      requirements:
-        "Expertise in machine learning algorithms, experience with AI frameworks, strong programming skills.",
-    },
-    {
-      title: "Digital Marketing Experts",
-      description:
-        "Plan and execute digital marketing strategies to enhance our online presence and engagement.",
-      requirements:
-        "Experience with digital marketing tools and platforms, strong analytical and creative skills.",
-    },
-  ];
+  const navigate = useNavigate();
 
   return (
-    <div className="w-full py-12 md:mt-[-5rem] mt-[0rem] md:py-24 lg:py-32">
+    <div className="w-full py-12 md:mt-[-5rem] mt-[0rem] md:pt-24 lg:pt-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-2">
           <h1 className="text-4xl font-bold ">Careers</h1>
@@ -76,29 +32,34 @@ const Careers = () => {
             <h2 className="text-3xl font-semibold ">Why Work with Us?</h2>
             <ul className="list-disc list-inside mt-4 space-y-2 ">
               <li>
-                Innovative Environment: Be part of a culture that encourages
-                creativity, innovation, and continuous learning.
+                <span className="font-semibold">Innovative Environment:</span>
+                Be part of a culture that encourages creativity, innovation, and
+                continuous learning.
               </li>
               <li>
-                Cutting-Edge Technologies: Work on projects that utilize the
-                latest technologies and shape the future of various industries.
+                <span className="font-semibold">Cutting-Edge Technologies:</span>
+                Work on projects that utilize the latest technologies and shape
+                the future of various industries.
               </li>
               <li>
-                Collaborative Culture: Join a team that values collaboration,
-                open communication, and mutual respect.
+                <span className="font-semibold">Collaborative Culture:</span>
+                Join a team that values collaboration, open communication, and
+                mutual respect.
               </li>
               <li>
-                Professional Growth: Access opportunities for professional
-                development, training, and career advancement.
+                <span className="font-semibold">Professional Growth:</span>
+                Access opportunities for professional development, training, and
+                career advancement.
               </li>
               <li>
-                Impactful Work: Contribute to meaningful projects that make a
-                difference in the world.
+                <span className="font-semibold">Impactful Work:</span>
+                Contribute to meaningful projects that make a difference in the
+                world.
               </li>
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h2 className="text-3xl font-semibold ">Current Openings</h2>
             <div className="mt-4 space-y-8">
               {jobOpenings.map((job, index) => (
@@ -115,7 +76,7 @@ const Careers = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="text-center mt-12">
             <h2 className="text-3xl font-semibold ">How to Apply</h2>

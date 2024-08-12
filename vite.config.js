@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   // plugins: [nextui()],
@@ -16,7 +15,6 @@ export default defineConfig({
     postcss: "./postcss.config.js",
     preprocessorOptions: {
       css: {
-        // Make sure to adjust the path if necessary
         additionalData: `@import "@nextui-org/react/dist/nextui.css";`,
       },
     },

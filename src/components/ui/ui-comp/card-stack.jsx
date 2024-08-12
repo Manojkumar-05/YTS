@@ -91,7 +91,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
           <FaArrowLeft />
         </button>
       </div>
-      <div className="absolute top-1/2 transform -translate-y-1/2 z-10  right-[.5rem] lg:right-[-3rem]">
+      <div className="absolute top-1/2 transform -translate-y-1/2 z-10  right-[1rem] lg:right-[-3rem]">
         <button
           className="text-white bg-black p-2 rounded-full shadow-md"
           onClick={handleNext}

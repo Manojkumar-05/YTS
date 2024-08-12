@@ -22,7 +22,7 @@ const DropdownButton = () => {
         </button>
         <div className="absolute left-0 hidden pt-2 group-hover:block">
           <div className="py-1 w-[7rem] bg-black rounded-md shadow-lg opacity-0 transform scale-95 transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
-            <Link
+            {/* <Link
               to="/contact"
               className="block px-4 py-2 text-sm text-white hover:bg-neutral-900"
             >
@@ -39,7 +39,7 @@ const DropdownButton = () => {
               className="block px-4 py-2 text-sm text-white hover:bg-neutral-900"
             >
               Join Us
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

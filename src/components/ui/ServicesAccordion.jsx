@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "./ui-comp/accordion";
+} from "./accordion";
 import { Button } from "@nextui-org/react"; 
 
 // New data array

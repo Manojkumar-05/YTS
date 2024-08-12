@@ -6,7 +6,7 @@ export default function NumberTicker({
   value,
   direction = "up",
   delay = 0,
-  className
+  className,
 }) {
   const ref = useRef(null);
   const motionValue = useMotionValue(direction === "down" ? value : 0);
@@ -23,19 +23,25 @@ export default function NumberTicker({
       }, delay * 1000);
   }, [motionValue, isInView, delay, value, direction]);
 
-  useEffect(() =>
-    springValue.on("change", (latest) => {
-      if (ref.current) {
-        ref.current.textContent = Intl.NumberFormat("en-US").format(latest.toFixed(0));
-      }
-    }), [springValue]);
+  useEffect(
+    () =>
+      springValue.on("change", (latest) => {
+        if (ref.current) {
+          ref.current.textContent = Intl.NumberFormat("en-US").format(
+            latest.toFixed(0)
+          );
+        }
+      }),
+    [springValue]
+  );
 
   return (
-    (<span
+    <span
       className={cn(
         "inline-block tabular-nums text-white font-bold tracking-wider",
         className
       )}
-      ref={ref} />)
+      ref={ref}
+    />
   );
 }

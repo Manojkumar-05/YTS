@@ -9,6 +9,7 @@ import { University } from "lucide-react";
 import meetingImg from "../assets/meet.jpg";
 import GradualSpacing from "../ui/ui-comp/gradual-spacing";
 import { TextGenerateEffect } from "../ui/ui-comp/text-generate-effect";
+import Careers from "./Careers";
 
 const About = () => {
   return (
@@ -114,6 +115,7 @@ const About = () => {
             </div>
         </div>
       </section>
+      <Careers />
     </div>
   );
 };

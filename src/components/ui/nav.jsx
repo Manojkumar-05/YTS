@@ -34,7 +34,7 @@ const DropdownIcon = ({ hovered }) => (
   </svg>
 );
 
-export default function App() {
+export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownHovered, setIsDropdownHovered] = useState(false);
   const [showNav, setShowNav] = useState(true);
@@ -59,12 +59,13 @@ export default function App() {
       shouldHideOnScroll
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className={`bg-black text-white font-medium transition-transform duration-300 ${
+      className={`bg-black text-white font-medium transition-transform duration-300 
+      ${
         showNav ? "transform translate-y-full" : "transform -translate-y-full"
       }`}
     >
       <NavbarBrand className="text-4xl font-bold">
-        <Link to="/">YAR</Link>
+        <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/">YAR</Link>
       </NavbarBrand>
       <NavbarContent className="sm:hidden" justify="end">
         <NavbarMenuToggle
@@ -74,58 +75,27 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-8" justify="end">
         <NavbarItem>
-          <Link to="/" className="text-white font-medium">
+          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/" className="text-white font-medium">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link to="/about" className="text-white font-medium">
+          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/about" className="text-white font-medium">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link to="/services" className="text-white font-medium">
+          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/services" className="text-white font-medium">
             Services
           </Link>
         </NavbarItem>
-        {/* <Dropdown isHoverable onOpenChange={setIsDropdownHovered} disableRipple>
-          <DropdownTrigger>
-            <Button
-              disableRipple
-              className="p-0 bg-transparent data-[hover=true]:bg-transparent flex font-medium"
-              endContent={<DropdownIcon hovered={isDropdownHovered} />}
-            >
-              Contact
-            </Button>
-          </DropdownTrigger>
-          <DropdownMenu
-            aria-label="Join Us features"
-            className="w-[120px] bg-black text-white font-medium p-4"
-            itemClasses={{
-              base: "gap-4",
-            }}
-          >
-            <DropdownItem
-              className="py-2 hover:bg-neutral-800"
-              key="contact_us"
-            >
-              <Link to="/contact" className="w-full h-full">
-                Contact Us
-              </Link>
-            </DropdownItem>
-            <DropdownItem className="py-2 hover:bg-neutral-800" key="careers">
-              <Link to="/careers" className="w-full h-full">
-                Careers
-              </Link>
-            </DropdownItem>
-            <DropdownItem className="py-2 hover:bg-neutral-800" key="join_us">
-              <Link to="/join" className="w-full h-full">
-                Join Us
-              </Link>
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown> */}
-        <DropDownButton />
+        <NavbarItem>
+          <Link onClick={() =>  window.scrollTo({ top: 0, behavior: "smooth" })} to="/contact" className="text-white font-medium">
+            Contact Us
+          </Link>
+        </NavbarItem>
+
+        {/* <DropDownButton /> */}
       </NavbarContent>
 
       <NavbarMenu className="flex flex-col gap-8 justify-center items-center bg-black text-white">
@@ -133,7 +103,7 @@ export default function App() {
           <Link
             to="/"
             className="w-full"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
             size="lg"
           >
             <div>Home</div>
@@ -143,7 +113,7 @@ export default function App() {
           <Link
             to="/about"
             className="w-full"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
             size="lg"
           >
             About
@@ -153,7 +123,7 @@ export default function App() {
           <Link
             to="/services"
             className="w-full"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
             size="lg"
           >
             Services
@@ -161,24 +131,24 @@ export default function App() {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <Link
-            to="/careers"
-            className="w-full"
-            onClick={() => setIsMenuOpen(false)}
-            size="lg"
-          >
-            Careers
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
             to="/contact"
             className="w-full"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
             size="lg"
           >
             Contact Us
           </Link>
         </NavbarMenuItem>
+        {/* <NavbarMenuItem>
+          <Link
+            to="/join"
+            className="w-full"
+            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
+            size="lg"
+          >
+            Join Us
+          </Link>
+        </NavbarMenuItem> */}
       </NavbarMenu>
     </Navbar>
   );
