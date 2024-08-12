@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center py-4 text-sm text-gray-500">
-        © {new Date().getFullYear()} YAR Tech Services. All rights reserved. - yarts.in
+        © {new Date().getFullYear()} YAR Tech Services. All rights reserved. -yarts.in
       </div>
     </footer>
   );

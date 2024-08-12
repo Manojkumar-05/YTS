@@ -8,6 +8,7 @@ import Careers from "./components/pages/Careers";
 import Join from "./components/pages/Join";
 import BackToTopButton from "./components/ui/ui-comp/backToTop";
 import FooterWrapper from "./components/ui/wrapper/footerWrapper";
+import PageNotFound from "./components/pages/PageNotFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/join" element={<Join />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <FooterWrapper />
         <BackToTopButton />
