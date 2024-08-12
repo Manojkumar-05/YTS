@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createRef, useState } from "react";
 import {
   IconBrandWhatsapp,
   IconBrandLinkedin,
@@ -7,6 +7,7 @@ import {
 import WhatsApp from "../assets/QR/Whatsapp.jpg";
 import Instagram from "../assets/QR/Instagram.jpg";
 import LinkedIn from "../assets/QR/LinkedIn.png";
+import { useOutsideClick } from "./hooks/use-outside-click";
 
 const socialMediaLinks = [
   {
@@ -31,13 +32,19 @@ const socialMediaLinks = [
     color: "bg-pink-500", // Change text color to bg color
   },
 ];
-
 const SocialMediaModal = ({ isOpen, onClose, selectedMedia }) => {
+  const modalRef = createRef();
+
+  useOutsideClick(modalRef, onClose);
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className={`${selectedMedia.color} rounded-lg p-8 max-w-sm w-full`}>
+      <div
+        ref={modalRef}
+        className={`${selectedMedia.color} rounded-lg p-8 max-w-sm w-full`}
+      >
         <h3 className="text-2xl font-bold mb-4 text-white">
           {selectedMedia.name}
         </h3>
@@ -55,7 +62,8 @@ const SocialMediaModal = ({ isOpen, onClose, selectedMedia }) => {
           rel="noopener noreferrer"
           className="block text-center text-white"
         >
-          URL : <span className="text-blue-500 underline">{selectedMedia.name}</span>
+          URL :{" "}
+          <span className="text-blue-500 underline">{selectedMedia.name}</span>
         </a>
         <button
           onClick={onClose}

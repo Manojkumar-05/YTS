@@ -1,9 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandWhatsapp,
   IconLink,
   IconMail,
   IconPhone,
@@ -11,11 +8,10 @@ import {
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
 import SocialMediaLinks from "../ui/Social";
-// import exp from "constants";/
 
 const Contact = () => {
   return (
-    <div className="w-full h-dvh">
+    <div className="w-full  h-[calc(100vh-64px)]">
       <section className="pt-12 pb-8">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
@@ -97,7 +93,6 @@ const Contact = () => {
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-
             >
               <SocialMediaLinks />
             </motion.div>
