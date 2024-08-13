@@ -7,37 +7,13 @@ import {
   NavbarMenuToggle,
   NavbarMenuItem,
   NavbarMenu,
-  Button,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
 } from "@nextui-org/react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/YAR-Logo.png"
-import DropDownButton from "./ui-comp/dropDown";
 
-const DropdownIcon = ({ hovered }) => (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={`feather feather-chevron-down transition-transform ${
-      hovered ? "rotate-180" : ""
-    }`}
-  >
-    <polyline points="6 9 12 15 18 9"></polyline>
-  </svg>
-);
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownHovered, setIsDropdownHovered] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -71,7 +47,7 @@ export default function Nav() {
           to="/"
           className="flex gap-2 justify-center items-center"
         >
-         <img className="rounded-full w-12"  src={logo} />
+          <img className="rounded-full w-12" src={logo} />
           YAR
         </Link>
       </NavbarBrand>
@@ -80,48 +56,55 @@ export default function Nav() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
       </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-8" justify="end">
+      <NavbarContent
+        className="hidden sm:flex gap-8 transition-colors duration-1000"
+        justify="end"
+      >
         <NavbarItem>
-          <Link
+          <NavLink
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             to="/"
-            className="text-white font-medium"
+            className={({ isActive }) =>
+              isActive ? "text-[#8a31c2dd] font-bold" : "text-white font-medium"
+            }
           >
             Home
-          </Link>
+          </NavLink>
         </NavbarItem>
         <NavbarItem>
-          <Link
+          <NavLink
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             to="/about"
-            className="text-white font-medium"
+            className={({ isActive }) =>
+              isActive ? "text-[#8a31c2dd] font-bold" : "text-white font-medium"
+            }
           >
             About
-          </Link>
+          </NavLink>
         </NavbarItem>
         <NavbarItem>
-          <Link
+          <NavLink
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             to="/services"
-            className="text-white font-medium"
+            className={({ isActive }) =>
+              isActive ? "text-[#8a31c2dd] font-bold" : "text-white font-medium"
+            }
           >
             Services
-          </Link>
+          </NavLink>
         </NavbarItem>
         <NavbarItem>
-          <Link
+          <NavLink
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             to="/contact"
-            className="text-white font-medium"
+            className={({ isActive }) =>
+              isActive ? "text-[#8a31c2dd] font-bold" : "text-white font-medium"
+            }
           >
             Contact Us
-          </Link>
+          </NavLink>
         </NavbarItem>
-
-        {/* <DropDownButton /> */}
       </NavbarContent>
-
       <NavbarMenu className="flex flex-col gap-8 justify-center items-center bg-black text-white">
         <NavbarMenuItem>
           <Link
@@ -175,16 +158,19 @@ export default function Nav() {
             Contact Us
           </Link>
         </NavbarMenuItem>
-        {/* <NavbarMenuItem>
+        <NavbarMenuItem>
           <Link
             to="/join"
             className="w-full"
-            onClick={() => {setIsMenuOpen(false);  window.scrollTo({ top: 0, behavior: "smooth" })}}
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             size="lg"
           >
             Join Us
           </Link>
-        </NavbarMenuItem> */}
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

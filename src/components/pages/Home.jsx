@@ -15,7 +15,7 @@ export function Home() {
 
   return (
     <div>
-      <div className="md:mt-[8rem] mt-[4rem] flex flex-col items-center gap-9 px-4 overflow-auto  ">
+      <div className="md:mt-[8rem] mt-[4rem] flex flex-col items-center gap-9 px-4 overflow-auto ">
         <section className="md:text-3xl lg:text-5xl text-[1.3rem] font-semibold mx-auto flex lg:flex-row gap-10">
           <div>
             <div className="flex">

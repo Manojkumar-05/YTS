@@ -15,21 +15,21 @@ const socialMediaLinks = [
     url: "https://wa.me/message/GN4Y7XYZAYUEI1",
     qr: WhatsApp,
     icon: <IconBrandWhatsapp className="h-10 w-10 text-green-400" />,
-    color: "bg-green-500", // Change text color to bg color
+    // Change text color to bg color
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/yar-tech-services-2957b931b",
     qr: LinkedIn,
     icon: <IconBrandLinkedin className="h-10 w-10 text-blue-700" />,
-    color: "bg-blue-700", // Change text color to bg color
+    // Change text color to bg color
   },
   {
     name: "Instagram",
     url: "https://www.instagram.com/yar_tech_service?utm_source=qr&igsh=dWUxdzl6NG03MWh0",
     qr: Instagram,
     icon: <IconBrandInstagram className="h-10 w-10 text-pink-500" />,
-    color: "bg-pink-500", // Change text color to bg color
+    // Change text color to bg color
   },
 ];
 const SocialMediaModal = ({ isOpen, onClose, selectedMedia }) => {
@@ -40,10 +40,10 @@ const SocialMediaModal = ({ isOpen, onClose, selectedMedia }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
       <div
         ref={modalRef}
-        className={`${selectedMedia.color} rounded-lg p-8 max-w-sm w-full`}
+        className="bg-[#8a31c2dd] rounded-lg p-8 max-w-sm w-full"
       >
         <h3 className="text-2xl font-bold mb-4 text-white">
           {selectedMedia.name}
@@ -62,7 +62,7 @@ const SocialMediaModal = ({ isOpen, onClose, selectedMedia }) => {
           rel="noopener noreferrer"
           className="block text-center text-white"
         >
-          URL :{" "}
+          <span className="font-semibold">URL : </span>
           <span className="text-blue-500 underline">{selectedMedia.name}</span>
         </a>
         <button
@@ -94,7 +94,7 @@ const SocialMediaLinks = () => {
     <>
       <div>
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-          Social Media
+          Social
         </h2>
         <div className="flex gap-3 mt-5 transition-all ease-in-out duration-300 ml-[1rem]">
           {socialMediaLinks.map((media) => (

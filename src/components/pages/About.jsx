@@ -13,7 +13,7 @@ import Careers from "./Careers";
 
 const About = () => {
   return (
-    <div className="flex flex-col min-h-dvh font-medium lg:mt-[-3rem]">
+    <div className="flex flex-col min-h-dvh font-medium lg:mt-[-3rem] ">
       <section className="w-full py-12 md:py-24 lg:py- bg-black h-dvh">
         <div className="mt-[5rem] container px-4 md:px-6 flex flex-col gap-12 text-center justify-center">
           <GradualSpacing
