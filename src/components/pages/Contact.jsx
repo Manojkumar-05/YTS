@@ -80,7 +80,7 @@ const Contact = () => {
                 </div>
               </div>
               <p className=" md:text-xl">
-                Support Hours: Monday to Sunday, 9:00 AM – 10:00 PM
+                Support Hours: Monday to Saturday, 9:00 AM – 6:00 PM
               </p>
             </motion.div>
           </div>
