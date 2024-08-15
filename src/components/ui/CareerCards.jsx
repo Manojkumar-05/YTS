@@ -52,7 +52,7 @@ const ReviewCard = ({ title, description, requirements }) => {
     <figure
       className={cn(
         "relative md:w-[500px] w-[200px] h-auto cursor-pointer overflow-hidden rounded-xl p-4 shadow-md",
-        "bg-neutral-200 hover:bg-[#a] hover:text-white text-black transition-all duration-300 ease-in-out",
+        "bg-neutral-200 hover:bg-[#8a31c2dd] hover:text-white text-black transition-all duration-300 ease-in-out",
         "md:h-[180px] "
       )}
     >

@@ -181,22 +181,22 @@ export default function ExpandableCards() {
       <AnimatePresence>
         {active && typeof active === "object" ? (
           <div className="fixed inset-0 grid place-items-center z-[100] ">
+            <motion.div
+              layoutId={`card-${active.title}-${id}`}
+              ref={ref}
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-neutral-900 sm:rounded-3xl overflow-hidden"
+            >
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.05 } }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center  rounded-full h-6 w-6"
+              className="flex absolute m-4 items-center justify-center  rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
               <p className="text-white bg-black w-10 rounded-full">X</p>
             </motion.button>
-            <motion.div
-              layoutId={`card-${active.title}-${id}`}
-              ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-neutral-900 sm:rounded-3xl overflow-hidden"
-            >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
                   
