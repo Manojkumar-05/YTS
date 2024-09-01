@@ -331,11 +331,11 @@ export function ServicesAccordion() {
 //                 </div>
 //               </AccordionTrigger>
 //               <AccordionContent className="bg-card text-card-foreground">
-//                 <div className="py-4 text-sm leading-relaxed">
+//                 <divQ className="py-4 text-sm leading-relaxed">
 //                   Yes, we offer volume discounts for larger orders. The discount
 //                   amount varies depending on the total order value. Please
 //                   contact our sales team for more information.
-//                 </div>
+//                 </divQ>
 //               </AccordionContent>
 //             </AccordionItem>
 //           </>

@@ -96,7 +96,7 @@ const SocialMediaLinks = () => {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
           Social
         </h2>
-        <div className="flex gap-3 mt-5 transition-all ease-in-out duration-300 ml-[1rem]">
+        <div className="flex gap-3 mt-5 transition-all ease-in-out duration-300">
           {socialMediaLinks.map((media) => (
             <button
               key={media.name}

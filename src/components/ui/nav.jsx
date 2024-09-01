@@ -9,7 +9,7 @@ import {
   NavbarMenu,
 } from "@nextui-org/react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/YAR-Logo.png"
+import logo from "../assets/YAR-Logo.jpg"
 
 
 export default function Nav() {
@@ -41,13 +41,13 @@ export default function Nav() {
         showNav ? "transform translate-y-full" : "transform -translate-y-full"
       }`}
     >
-      <NavbarBrand className="text-4xl font-bold">
+      <NavbarBrand className="text-[1.7rem] font-bold">
         <Link
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           to="/"
           className="flex gap-2 justify-center items-center"
         >
-          <img className="rounded-full w-12" src={logo} />
+          <img className="rounded-full w-10" src={logo} />
           YAR
         </Link>
       </NavbarBrand>
