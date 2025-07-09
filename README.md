@@ -10,7 +10,6 @@ A sleek, modern landing page built for a startup using **React (Vite)**, **Tailw
 - **Tailwind CSS** – Utility-first CSS for rapid UI development
 - **NextUI** – Beautiful, accessible UI components
 - **shadcn/ui** – Radically modern, customizable components
-- **TypeScript** *(optional)* – For type safety and better DX
 
 ---
 
