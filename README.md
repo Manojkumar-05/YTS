@@ -23,14 +23,16 @@ _Add a screenshot or GIF here to show off your design_
 
 ## 📁 Project Structure
 
+```plaintext
 .
 ├── public/
 ├── src/
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # Page sections (Hero, Features, etc.)
-│ ├── assets/ # Images, icons, fonts
-│ ├── App.tsx
-│ └── main.tsx
+│   ├── components/        # Reusable UI components
+│   ├── pages/             # Page sections (Hero, Features, etc.)
+│   ├── assets/            # Images, icons, fonts
+│   ├── App.tsx
+│   └── main.tsx
 ├── tailwind.config.ts
 ├── vite.config.ts
 └── README.md
+
