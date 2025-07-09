@@ -17,22 +17,9 @@ A sleek, modern landing page built for a startup using **React (Vite)**, **Tailw
 ## 📸 Preview
 
 _Add a screenshot or GIF here to show off your design_  
-`[Insert image or link to live demo]`
+![image](https://github.com/user-attachments/assets/fcdb42a6-99e8-434a-ac54-da42b11e928f)
+![image](https://github.com/user-attachments/assets/e74be963-a434-41e9-8559-b40b6615f82b)
 
 ---
 
-## 📁 Project Structure
-
-```plaintext
-.
-├── public/
-├── src/
-│   ├── components/        # Reusable UI components
-│   ├── pages/             # Page sections (Hero, Features, etc.)
-│   ├── assets/            # Images, icons, fonts
-│   ├── App.tsx
-│   └── main.tsx
-├── tailwind.config.ts
-├── vite.config.ts
-└── README.md
 
